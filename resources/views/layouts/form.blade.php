@@ -17,7 +17,7 @@
 @yield('content')
 
  <!-- JS -->
- <script src="vendor/jquery/jquery.min.js"></script>
- <script src="js/main.js"></script>
+ <script src="vendors/jquery/jquery.min.js"></script>
+ <script src="js/formjs/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

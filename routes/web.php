@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +23,9 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('verified');
+
+Route::get('/about',[BlogController::class,'about']);
+Route::get('/blogs',[BlogController::class,'blog']);
+Route::get('/blog',[BlogController::class,'postDetails']);
+Route::get('/contact',[BlogController::class,'contact']);
+Route::get('/index',[BlogController::class,'index']);
