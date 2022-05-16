@@ -14,6 +14,7 @@
             <div class="signin-form">
                 <h2 class="form-title">Sign in</h2>
                 <form method="POST" class="register-form" id="login-form" action="{{ route('login') }}">
+                    @csrf
                     <div class="form-group">
                         <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
                         <input type="text" name="email" id="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required autofocus/>

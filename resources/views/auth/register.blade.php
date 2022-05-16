@@ -33,8 +33,8 @@
 
                             </div>
                             <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" class = "form-control @error('password') is-invalid @enderror" name="pass" id="pass" placeholder="Password"/>
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" class = "form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="Password"/>
                             
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -45,11 +45,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="password-confirm"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" required name="re_pass" id="password-confirm" placeholder="Repeat your password"/>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Repeat your password">
                             </div>
                             
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="{{ __('Register') }}"/>
                             </div>
                         </form>
                     </div>
