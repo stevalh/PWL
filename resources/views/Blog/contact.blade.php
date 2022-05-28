@@ -16,8 +16,8 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="/home">
-                <h2>Stand Blog<em>.</em></h2>
+            <a class="navbar-brand" href="/index">
+                <h2>AllT Blog<em>.</em></h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home">Home
+                        <a class="nav-link" href="/index">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -56,8 +56,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-content">
-                        <h4>contact us</h4>
-                        <h2>let’s stay in touch!</h2>
+                        <h4>Contact Us</h4>
+                        <h2>Let's stay in touch!</h2>
                     </div>
                 </div>
             </div>
@@ -126,16 +126,16 @@
                                 <div class="content">
                                     <ul>
                                         <li>
-                                            <h5>090-484-8080</h5>
+                                            <h5>+62 823-6792-1304</h5>
                                             <span>PHONE NUMBER</span>
                                         </li>
                                         <li>
-                                            <h5>info@company.com</h5>
+                                            <h5>miminwyz@gmail.com</h5>
                                             <span>EMAIL ADDRESS</span>
                                         </li>
                                         <li>
-                                            <h5>123 Aenean id posuere dui,
-                                                <br>Praesent laoreet 10660
+                                            <h5>Universitas Sumatera Utara,
+                                                <br>Medan
                                             </h5>
                                             <span>STREET ADDRESS</span>
                                         </li>
@@ -146,15 +146,14 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-12">
                 <div id="map">
                     <iframe
-                        src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1002475786586!2d98.65368281484415!3d3.5643926474060987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fe03ed8450b%3A0xe84941c195268efc!2sUniversity%20of%20Sumatera%20Utara!5e0!3m2!1sen!2sid!4v1653724940903!5m2!1sen!2sid"
                         width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
-
+            <div class="col-lg-12 mb-5"></div>
         </div>
     </div>
 </section>
