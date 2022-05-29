@@ -14,13 +14,13 @@
     <title>AllT Blog - About</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-stand-blog.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/templatemo-stand-blog.css">
+    <link rel="stylesheet" href="css/owl.css">
     <!--
 
 TemplateMo 551 Stand Blog
@@ -31,22 +31,11 @@ https://templatemo.com/tm-551-stand-blog
 </head>
 
 <body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-
     <!-- Header -->
     <header class="">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/index">
                     <h2>AllT Blog<em>.</em></h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -56,24 +45,23 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home
+                            <a class="nav-link" href="/index">Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About Us</a>
+                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a class="nav-link" href="/blogs">Blog Entries</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog Entries</a>
+                            <a class="nav-link" href="/blog">Post Details</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="post-details.html">Post Details</a>
+                            <a class="nav-link" href="/contact">Contact Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="profile.html">Profile</a>
+                            <a class="nav-link" href="/profile">Profile</a>
                         </li>
                     </ul>
                 </div>
@@ -138,14 +126,14 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                          Make a post and then request approval from admin
+                            Make a post and then request approval from admin
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Make Your Post First</h5>
-                          <p class="card-text">Post must contain about how to do something</p>
-                          <a href="#" class="btn btn-primary">Make a post</a>
+                            <h5 class="card-title">Make Your Post First</h5>
+                            <p class="card-text">Post must contain about how to do something</p>
+                            <a href="#" class="btn btn-primary">Make a post</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,15 +160,15 @@ https://templatemo.com/tm-551-stand-blog
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/accordions.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/accordions.js"></script>
 
     <script language="text/Javascript">
         cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
