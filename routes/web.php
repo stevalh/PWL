@@ -29,9 +29,27 @@ Route::get('/admin-panel', function () {
     return view('admin.index');
 });
 
+Route::get('/admin-panel/approvepost', function () {
+    return view('admin.approvepost');
+});
+
+Route::get('/admin-panel/cekkomentar', function () {
+    return view('admin.cekkomentar');
+});
+
+Route::get('/admin-panel/makecategory', function () {
+    return view('admin.makecategory');
+});
+
+Route::get('/admin-panel/makepost', function () {
+    return view('admin.makepost');
+});
+
+Route::get('/admin-panel/pagesprofile', function () {
+    return view('admin.pages-profile');
+});
+
 Auth::routes();
-
-
 
 Route::get('/about',[BlogController::class,'about'])->name('about');
 Route::get('/blog',[BlogController::class,'postDetails'])->name('details');
