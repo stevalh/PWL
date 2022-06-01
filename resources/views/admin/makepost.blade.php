@@ -11,7 +11,7 @@
         content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="img/admin-img/img/icons/icon-48x48.png" />
+    <link rel="shortcut icon" href="images/admin-img/img/icons/icon-48x48.png" />
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/ui-forms.html" />
 
@@ -172,7 +172,7 @@
                                     <a href="#" class="list-group-item">
                                         <div class="row g-0 align-items-center">
                                             <div class="col-2">
-                                                <img src="img/admin-img/img/avatars/avatar-5.jpg"
+                                                <img src="images/admin-img/img/avatars/avatar-5.jpg"
                                                     class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
                                             </div>
                                             <div class="col-10 ps-2">
@@ -186,7 +186,7 @@
                                     <a href="#" class="list-group-item">
                                         <div class="row g-0 align-items-center">
                                             <div class="col-2">
-                                                <img src="img/admin-img/img/avatars/avatar-2.jpg"
+                                                <img src="images/admin-img/img/avatars/avatar-2.jpg"
                                                     class="avatar img-fluid rounded-circle" alt="William Harris">
                                             </div>
                                             <div class="col-10 ps-2">
@@ -200,7 +200,7 @@
                                     <a href="#" class="list-group-item">
                                         <div class="row g-0 align-items-center">
                                             <div class="col-2">
-                                                <img src="img/admin-img/img/avatars/avatar-4.jpg"
+                                                <img src="images/admin-img/img/avatars/avatar-4.jpg"
                                                     class="avatar img-fluid rounded-circle" alt="Christina Mason">
                                             </div>
                                             <div class="col-10 ps-2">
@@ -214,7 +214,7 @@
                                     <a href="#" class="list-group-item">
                                         <div class="row g-0 align-items-center">
                                             <div class="col-2">
-                                                <img src="img/admin-img/img/avatars/avatar-3.jpg"
+                                                <img src="images/admin-img/img/avatars/avatar-3.jpg"
                                                     class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
                                             </div>
                                             <div class="col-10 ps-2">
@@ -239,7 +239,7 @@
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
                                 data-bs-toggle="dropdown">
-                                <img src="img/admin-img/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1"
+                                <img src="images/admin-img/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1"
                                     alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
