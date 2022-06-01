@@ -25,13 +25,34 @@ Route::get('/profile', function () {
     return view('blog.profile');
 });
 
+// admin (not completed)
 Route::get('/admin-panel', function () {
     return view('admin.index');
 });
 
+Route::get('/approvepost', function () {
+    return view('admin.approvepost');
+});
+
+Route::get('/cekkomentar', function () {
+    return view('admin.cekkomentar');
+});
+
+Route::get('/makecategory', function () {
+    return view('admin.makecategory');
+});
+
+Route::get('/makepost', function () {
+    return view('admin.makepost');
+});
+
+Route::get('/pagesprofile', function () {
+    return view('admin.pages-profile');
+});
+
+// end of admin (not completed)
+
 Auth::routes();
-
-
 
 Route::get('/about',[BlogController::class,'about'])->name('about');
 
