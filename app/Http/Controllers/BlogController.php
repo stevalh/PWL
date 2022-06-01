@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     $this->middleware(['auth']);
+    // }
     public function blog()
     {
         return view('Blog.blog');
