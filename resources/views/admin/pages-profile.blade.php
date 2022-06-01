@@ -25,7 +25,7 @@
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.html">
+				<a class="sidebar-brand" href="/admin-panel">
 					<span class="align-middle">Admin Panel</span>
 				</a>
 
@@ -35,40 +35,40 @@
 					</li>
 
 					<li class="sidebar-item active">
-						<a class="sidebar-link" href="index.html">
+						<a class="sidebar-link" href="/admin-panel">
 							<i class="align-middle" data-feather="sliders"></i> <span
 								class="align-middle">Dashboard</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="/pagesprofile">
 							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="makepost.html">
+						<a class="sidebar-link" href="/makepost">
 							<i class="align-middle" data-feather="check-square"></i> <span
 								class="align-middle">Posting</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="makecategory.html">
+						<a class="sidebar-link" href="/makecategory">
 							<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Category</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="cekkomentar.html">
+						<a class="sidebar-link" href="/cekkomentar">
 							<i class="align-middle" data-feather="align-left"></i> <span
 								class="align-middle">Comment</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="approvepost.html">
+						<a class="sidebar-link" href="/approvepost">
 							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Approve
 								Post</span>
 						</a>
