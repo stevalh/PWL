@@ -11,13 +11,13 @@
 		content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="img/admin-img/img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-	<title>AllT Blog - Admin Panel</title>
+	<title>AllT Blog - Admin Panel | Dashboard</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="css/admincss/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -172,7 +172,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-5.jpg"
+												<img src="img/admin-img/img/avatars/avatar-5.jpg"
 													class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
 											</div>
 											<div class="col-10 ps-2">
@@ -186,7 +186,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-2.jpg"
+												<img src="img/admin-img/img/avatars/avatar-2.jpg"
 													class="avatar img-fluid rounded-circle" alt="William Harris">
 											</div>
 											<div class="col-10 ps-2">
@@ -200,7 +200,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-4.jpg"
+												<img src="img/admin-img/img/avatars/avatar-4.jpg"
 													class="avatar img-fluid rounded-circle" alt="Christina Mason">
 											</div>
 											<div class="col-10 ps-2">
@@ -214,7 +214,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-3.jpg"
+												<img src="img/admin-img/img/avatars/avatar-3.jpg"
 													class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
 											</div>
 											<div class="col-10 ps-2">
@@ -239,7 +239,7 @@
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
 								data-bs-toggle="dropdown">
-								<img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1"
+								<img src="img/admin-img/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1"
 									alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">
@@ -534,7 +534,7 @@
 						<div class="col-6 text-start">
 							<p class="mb-0">
 								<a class="text-muted" href="https://adminkit.io/"
-									target="_blank"><strong>AdminKit</strong></a> &copy;
+									target="_blank"><strong>Admin Panel</strong></a> &copy;
 							</p>
 						</div>
 						<div class="col-6 text-end">
@@ -559,7 +559,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.js"></script>
+	<script src="js/adminjs/js/app.js"></script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {

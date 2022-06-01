@@ -11,13 +11,13 @@
 		content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="img/admin-img/img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/ui-cards.html" />
 
-	<title>Cards | AdminKit Demo</title>
+	<title>AllT Blog - Admin Panel | Approval</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="css/admincss/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -67,7 +67,7 @@
 						</a>
 					</li>
 
-					<li class="sidebar-item">
+                    <li class="sidebar-item">
 						<a class="sidebar-link" href="approvepost.html">
 							<i class="align-middle" data-feather="align-left"></i> <span
 								class="align-middle">Approve Post</span>
@@ -172,7 +172,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-5.jpg"
+												<img src="img/admin-img/img/avatars/avatar-5.jpg"
 													class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
 											</div>
 											<div class="col-10 ps-2">
@@ -186,7 +186,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-2.jpg"
+												<img src="img/admin-img/img/avatars/avatar-2.jpg"
 													class="avatar img-fluid rounded-circle" alt="William Harris">
 											</div>
 											<div class="col-10 ps-2">
@@ -200,7 +200,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-4.jpg"
+												<img src="img/admin-img/img/avatars/avatar-4.jpg"
 													class="avatar img-fluid rounded-circle" alt="Christina Mason">
 											</div>
 											<div class="col-10 ps-2">
@@ -214,7 +214,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="img/avatars/avatar-3.jpg"
+												<img src="img/admin-img/img/avatars/avatar-3.jpg"
 													class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
 											</div>
 											<div class="col-10 ps-2">
@@ -239,7 +239,7 @@
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
 								data-bs-toggle="dropdown">
-								<img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1"
+								<img src="img/admin-img/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1"
 									alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">
@@ -272,53 +272,27 @@
 					<div class="row">
 						<div class="col-6 col-md-4">
 							<div class="card">
-								<img class="card-img-top" src="img/photos/unsplash-1.jpg" alt="Unsplash">
+								<img class="card-img-top" src="img/admin-img/img/photos/unsplash-1.jpg" alt="Unsplash">
 								<div class="card-header">
 									<h5 class="card-title mb-0">Cooking</h5>
 								</div>
 								<div class="card-body">
 									<p class="card-text"></p>
-									<a href="#" class="card-link">Card link</a>
-									<a href="#" class="card-link">Another link</a>
+									<a href="#" class="card-link">Check this post</a>
+									<a href="#" class="card-link">Approve</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-6 col-md-4">
 							<div class="card">
-								<img class="card-img-top" src="img/photos/unsplash-2.jpg" alt="Unsplash">
+								<img class="card-img-top" src="img/admin-img/img/photos/unsplash-2.jpg" alt="Unsplash">
 								<div class="card-header">
 									<h5 class="card-title mb-0">Lifestyle</h5>
 								</div>
 								<div class="card-body">
 									<p class="card-text"></p>
-									<a href="#" class="card-link">Card link</a>
-									<a href="#" class="card-link">Another link</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-6 col-md-4">
-							<div class="card">
-								<img class="card-img-top" src="img/photos/unsplash-3.jpg" alt="Unsplash">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Design</h5>
-								</div>
-								<div class="card-body">
-									<p class="card-text"></p>
-									<a href="#" class="card-link">Card link</a>
-									<a href="#" class="card-link">Another link</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-6 col-md-4">
-							<div class="card">
-								<img class="card-img-top" src="img/photos/unsplash-1.jpg" alt="Unsplash">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Web Coding</h5>
-								</div>
-								<div class="card-body">
-									<p class="card-text"></p>
-									<a href="#" class="card-link">Card link</a>
-									<a href="#" class="card-link">Another link</a>
+									<a href="#" class="card-link">Check this post</a>
+									<a href="#" class="card-link">Approve</a>
 								</div>
 							</div>
 						</div>
@@ -333,7 +307,7 @@
 						<div class="col-6 text-start">
 							<p class="mb-0">
 								<a class="text-muted" href="https://adminkit.io/"
-									target="_blank"><strong>AdminKit</strong></a> &copy;
+									target="_blank"><strong>Admin Panel</strong></a> &copy;
 							</p>
 						</div>
 						<div class="col-6 text-end">
@@ -358,7 +332,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.js"></script>
+	<script src="js/adminjs/js/app.js"></script>
 
 </body>
 
