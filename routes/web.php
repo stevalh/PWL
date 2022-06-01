@@ -25,29 +25,32 @@ Route::get('/profile', function () {
     return view('blog.profile');
 });
 
+// admin (not completed)
 Route::get('/admin-panel', function () {
     return view('admin.index');
 });
 
-Route::get('/admin-panel/approvepost', function () {
+Route::get('/approvepost', function () {
     return view('admin.approvepost');
 });
 
-Route::get('/admin-panel/cekkomentar', function () {
+Route::get('/cekkomentar', function () {
     return view('admin.cekkomentar');
 });
 
-Route::get('/admin-panel/makecategory', function () {
+Route::get('/makecategory', function () {
     return view('admin.makecategory');
 });
 
-Route::get('/admin-panel/makepost', function () {
+Route::get('/makepost', function () {
     return view('admin.makepost');
 });
 
-Route::get('/admin-panel/pagesprofile', function () {
+Route::get('/pagesprofile', function () {
     return view('admin.pages-profile');
 });
+
+// end of admin (not completed)
 
 Auth::routes();
 
