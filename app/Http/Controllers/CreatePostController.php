@@ -16,6 +16,7 @@ class CreatePostController extends Controller
     }
     public function createpost(Request $request)
     {
+        
       $validatedData =$request->validate([
         'title'=>'required|max:255|unique:posts',
         'category_id'=>'required',
@@ -29,13 +30,15 @@ class CreatePostController extends Controller
         'thumb.image'=>"Hanya menerima gambar"
     ]);
 
-    if($request->file('image'))
+    if($request->file('thumb'))
     {
-        $validatedData['image']=$request->file('image')->store('thumbnail');
+        $validatedData['thumb']=$request->file('thumb')->store('thumbnail');
     }
 
       $validatedData['user_id']=auth()->user()->id;
 
       Post::create($validatedData);
+
+      return redirect()->back()->with('success','Post Berhasil dibuat');
     }
 }
