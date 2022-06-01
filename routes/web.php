@@ -25,6 +25,10 @@ Route::get('/profile', function () {
     return view('blog.profile');
 });
 
+Route::get('/admin-panel', function () {
+    return view('admin.index');
+});
+
 Auth::routes();
 
 
