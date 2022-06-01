@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class BlogController extends Controller
 {
@@ -31,9 +32,12 @@ class BlogController extends Controller
 
    
 
-    public function postDetails()
+  
+
+    public function find($id)
     {
-        return view('Blog.post-details');
+        $post=Post::findorFail($id);
+        return view ('Blog.post-details',compact('post'));
     }
 
    

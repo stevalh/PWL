@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -20,6 +21,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Blog.index');
+        $banners=Post::all()->take(5);
+        $posts=Post::all();// paginate yg ini aja
+        // $sidebar=Post::all()//Paginate klo maau
+
+        return view('Blog.index',compact('banners','posts'));
     }
 }
+

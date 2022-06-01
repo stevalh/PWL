@@ -14,13 +14,13 @@
   <title>AllT Blog - Posts</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="css/fontawesome.css">
-  <link rel="stylesheet" href="css/templatemo-stand-blog.css">
-  <link rel="stylesheet" href="css/owl.css">
+  <link rel="stylesheet" href="/css/fontawesome.css">
+  <link rel="stylesheet" href="/css/templatemo-stand-blog.css">
+  <link rel="stylesheet" href="/css/owl.css">
   <!--
 
 TemplateMo 551 Stand Blog
@@ -37,15 +37,15 @@ https://templatemo.com/tm-551-stand-blog
   @yield('content')
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendors/jquery/jquery.min.js"></script>
-  <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendors/jquery/jquery.min.js"></script>
+  <script src="/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Additional Scripts -->
-  <script src="js/custom.js"></script>
-  <script src="js/owl.js"></script>
-  <script src="js/slick.js"></script>
-  <script src="js/isotope.js"></script>
-  <script src="js/accordions.js"></script>
+  <script src="/js/custom.js"></script>
+  <script src="/js/owl.js"></script>
+  <script src="/js/slick.js"></script>
+  <script src="/js/isotope.js"></script>
+  <script src="/js/accordions.js"></script>
 
   <script language="text/Javascript">
     cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
