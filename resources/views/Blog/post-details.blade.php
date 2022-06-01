@@ -205,73 +205,14 @@ https://templatemo.com/tm-551-stand-blog
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="sidebar">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="sidebar-item search">
-                  <form id="search_form" name="gs" method="GET" action="#">
-                    <input type="text" name="q" class="searchText" placeholder="TYPE TO SEARCH..." autocomplete="on">
-                  </form>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="sidebar-item recent-posts">
-                  <div class="sidebar-heading">
-                    <h2>Recent Posts</h2>
-                  </div>
-                  <div class="content">
-                    <ul>
-                      <li><a href="post-details.html">
-                          <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
-                          <span>May 31, 2020</span>
-                        </a></li>
-                      <li><a href="post-details.html">
-                          <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
-                          <span>May 28, 2020</span>
-                        </a></li>
-                      <li><a href="post-details.html">
-                          <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
-                          <span>May 14, 2020</span>
-                        </a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="sidebar-item categories">
-                  <div class="sidebar-heading">
-                    <h2>Categories</h2>
-                  </div>
-                  <div class="content">
-                    <ul>
-                      <li><a href="#">- Website Coding</a></li>
-                      <li><a href="#">- Design</a></li>
-                      <li><a href="#">- Lifestyle</a></li>
-                      <li><a href="#">- Cooking</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="sidebar-item tags">
-                  <div class="sidebar-heading">
-                    <h2>Tag Clouds</h2>
-                  </div>
-                  <div class="content">
-                    <ul>
-                      <li><a href="#">HTML</a></li>
-                      <li><a href="#">CSS</a></li>
-                      <li><a href="#">JavaScript</a></li>
-                      <li><a href="#">PHP</a></li>
-                      <li><a href="#">MySQL</a></li>
-                      <li><a href="#">Bootstrap</a></li>
-                      <li><a href="#">Laravel</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/41/81/0a/41810acd7e15633293a7c6c0309c11e5.jpg" class="card-img-top">
+                <a class="btn btn-outline-success" href="buat.php" role="button">
+                    <i>Buat Post</i>
+                </a>
             </div>
-          </div>
+        </div>
+    </div>
         </div>
       </div>
     </div>

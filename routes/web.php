@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CreatePostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,4 +32,8 @@ Auth::routes();
 Route::get('/about',[BlogController::class,'about'])->name('about');
 Route::get('/blog',[BlogController::class,'postDetails'])->name('details');
 Route::get('/contact',[BlogController::class,'contact'])->name('contact');
-Route::get('/',[BlogController::class,'index'])->name('home');
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/create',[CreatePostController::class,'index'])->name('createpost');
+Route::post('/create',[CreatePostController::class,'createpost'])->name('createpost');
+
+

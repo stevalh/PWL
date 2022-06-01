@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
 
-    // public function __construct()
-    // {
-    //     $this->middleware(['auth']);
-    // }
+
+   
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+    
     public function blog()
     {
         return view('Blog.blog');
@@ -26,13 +29,12 @@ class BlogController extends Controller
         return view('Blog.contact');
     }
 
-    public function index()
-    {
-        return view('Blog.index');
-    }
+   
 
     public function postDetails()
     {
         return view('Blog.post-details');
     }
+
+   
 }
