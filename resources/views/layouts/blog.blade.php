@@ -33,8 +33,8 @@ https://templatemo.com/tm-551-stand-blog
     @yield('content')
 
      <!-- Bootstrap core JavaScript -->
-     <script src="vendors/jquery/jquery.min.js"></script>
-     <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="/vendors/jquery/jquery.min.js"></script>
+     <script src="/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 
      <!-- Additional Scripts -->
      <script src="js/blogjs/custom.js"></script>

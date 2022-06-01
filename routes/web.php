@@ -16,20 +16,18 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-Route::get('/',[BlogController::class,'blog']);
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/blogs',[BlogController::class,'blog'])->name('myblogs');
+
 
 Route::get('/profile', function () {
     return view('blog.profile');
 });
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('verified');
 
-Route::get('/about',[BlogController::class,'about']);
-Route::get('/blog',[BlogController::class,'postDetails']);
-Route::get('/contact',[BlogController::class,'contact']);
-Route::get('/index',[BlogController::class,'index']);
+
+Route::get('/about',[BlogController::class,'about'])->name('about');
+Route::get('/blog',[BlogController::class,'postDetails'])->name('details');
+Route::get('/contact',[BlogController::class,'contact'])->name('contact');
+Route::get('/',[BlogController::class,'index'])->name('home');
