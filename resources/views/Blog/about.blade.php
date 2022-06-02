@@ -18,66 +18,248 @@
 </div>
 
 <!-- Banner Ends Here -->
-
-<section class="about-us">
+<section class="blog-posts grid-system">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <h3>All Post You Made</h3>
-                <div class="row ">
-                    {{-- Start loop here --}}
-                    {{-- 1 --}}
-                    <div class="col-lg-6 mt-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Kategory post</h5>
-                                <p class="card-text">Isi post</p>
-                                <a href="#" class="btn btn-primary">Delete post</a>
+                <div class="all-blog-posts">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blog-thumb-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <span>Lifestyle</span>
+                                    <a href="post-details.html">
+                                        <h4>Donec tincidunt leo</h4>
+                                    </a>
+                                    <ul class="post-info">
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">May 31, 2020</a></li>
+                                        <li><a href="#">12 Comments</a></li>
+                                    </ul>
+                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
+                                        mauris sit amet
+                                        eleifend.</p>
+                                    <div class="post-options">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-tags"></i></li>
+                                                    <li><a href="#">Best Templates</a>,</li>
+                                                    <li><a href="#">TemplateMo</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {{-- 2 --}}
-                    <div class="col-lg-6 mt-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Kategory post</h5>
-                                <p class="card-text">Isi post</p>
-                                <a href="#" class="btn btn-primary">Delete post</a>
+                        <div class="col-lg-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blog-thumb-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <span>Lifestyle</span>
+                                    <a href="post-details.html">
+                                        <h4>Suspendisse et metus</h4>
+                                    </a>
+                                    <ul class="post-info">
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">May 22, 2020</a></li>
+                                        <li><a href="#">26 Comments</a></li>
+                                    </ul>
+                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
+                                        mauris sit amet
+                                        eleifend.</p>
+                                    <div class="post-options">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-tags"></i></li>
+                                                    <li><a href="#">Best Templates</a>,</li>
+                                                    <li><a href="#">TemplateMo</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {{-- 3 --}}
-                    <div class="col-lg-6 mt-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Kategory post</h5>
-                                <p class="card-text">Isi post</p>
-                                <a href="#" class="btn btn-primary">Delete post</a>
+                        <div class="col-lg-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blog-thumb-03.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <span>Lifestyle</span>
+                                    <a href="post-details.html">
+                                        <h4>Donec tincidunt leo</h4>
+                                    </a>
+                                    <ul class="post-info">
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">May 18, 2020</a></li>
+                                        <li><a href="#">42 Comments</a></li>
+                                    </ul>
+                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
+                                        mauris sit amet
+                                        eleifend.</p>
+                                    <div class="post-options">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-tags"></i></li>
+                                                    <li><a href="#">Best Templates</a>,</li>
+                                                    <li><a href="#">TemplateMo</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blog-thumb-04.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <span>Lifestyle</span>
+                                    <a href="post-details.html">
+                                        <h4>Mauris ac dolor ornare</h4>
+                                    </a>
+                                    <ul class="post-info">
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">May 16, 2020</a></li>
+                                        <li><a href="#">28 Comments</a></li>
+                                    </ul>
+                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
+                                        mauris sit amet
+                                        eleifend.</p>
+                                    <div class="post-options">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-tags"></i></li>
+                                                    <li><a href="#">Best Templates</a>,</li>
+                                                    <li><a href="#">TemplateMo</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blog-thumb-05.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <span>Lifestyle</span>
+                                    <a href="post-details.html">
+                                        <h4>Donec tincidunt leo</h4>
+                                    </a>
+                                    <ul class="post-info">
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">May 12, 2020</a></li>
+                                        <li><a href="#">16 Comments</a></li>
+                                    </ul>
+                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
+                                        mauris sit amet
+                                        eleifend.</p>
+                                    <div class="post-options">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-tags"></i></li>
+                                                    <li><a href="#">Best Templates</a>,</li>
+                                                    <li><a href="#">TemplateMo</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blog-thumb-06.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <span>Lifestyle</span>
+                                    <a href="post-details.html">
+                                        <h4>Mauris ac dolor ornare</h4>
+                                    </a>
+                                    <ul class="post-info">
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">May 10, 2020</a></li>
+                                        <li><a href="#">3 Comments</a></li>
+                                    </ul>
+                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
+                                        mauris sit amet
+                                        eleifend.</p>
+                                    <div class="post-options">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-tags"></i></li>
+                                                    <li><a href="#">Best Templates</a>,</li>
+                                                    <li><a href="#">TemplateMo</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <ul class="page-numbers">
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    {{-- End loop --}}
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card mt-4" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Nama: <br>Email: dll</p>
-                        <a href="#" class="card-link">Edit Profile</a>
+                <div class="sidebar">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blog-thumb-06.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <span>Your Profile</span>
+                                        <h4>Name: </h4>
+                                    <ul class="post-info">
+                                        <li><a href="#">Level: user, admin dll</a></li>
+                                        <li><a href="#">email..</a></li>
+                                        <li><a href="#">jlh post ....</a></li>
+                                    </ul>
+                                    <div class="post-options">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-cog"></i></li>
+                                                    <li><a href="#" style="color: #f48840">Edit Profile</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Profile -->
-        <!-- End Profile -->
-
     </div>
 </section>
-
-
 @endsection
