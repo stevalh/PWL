@@ -38,6 +38,10 @@ Route::get('/cekkomentar', function () {
     return view('admin.cekkomentar');
 });
 
+Route::get('/addcategory', function () {
+    return view('admin.addcategory');
+});
+
 Route::get('/makecategory', function () {
     return view('admin.makecategory');
 });

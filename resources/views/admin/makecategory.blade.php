@@ -111,43 +111,7 @@
 											</div>
 										</div>
 									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-warning" data-feather="bell"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Lorem ipsum</div>
-												<div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate
-													hendrerit et.</div>
-												<div class="text-muted small mt-1">2h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-primary" data-feather="home"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Login from 192.186.1.8</div>
-												<div class="text-muted small mt-1">5h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-success" data-feather="user-plus"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">New connection</div>
-												<div class="text-muted small mt-1">Christina accepted your request.
-												</div>
-												<div class="text-muted small mt-1">14h ago</div>
-											</div>
-										</div>
-									</a>
+									
 								</div>
 								<div class="dropdown-menu-footer">
 									<a href="#" class="text-muted">Show all notifications</a>
@@ -278,50 +242,12 @@
 								</div>
 								<div class="card-body">
 									<p class="card-text"></p>
-									<a href="#" class="card-link">Card link</a>
-									<a href="#" class="card-link">Another link</a>
+									<a href="#" class="card-link">Update</a>
+									<a href="#" class="card-link">Delete</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-6 col-md-4">
-							<div class="card">
-								<img class="card-img-top" src="images/admin-img/img/photos/unsplash-2.jpg" alt="Unsplash">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Lifestyle</h5>
-								</div>
-								<div class="card-body">
-									<p class="card-text"></p>
-									<a href="#" class="card-link">Card link</a>
-									<a href="#" class="card-link">Another link</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-6 col-md-4">
-							<div class="card">
-								<img class="card-img-top" src="images/admin-img/img/photos/unsplash-3.jpg" alt="Unsplash">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Design</h5>
-								</div>
-								<div class="card-body">
-									<p class="card-text"></p>
-									<a href="#" class="card-link">Card link</a>
-									<a href="#" class="card-link">Another link</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-6 col-md-4">
-							<div class="card">
-								<img class="card-img-top" src="images/admin-img/img/photos/unsplash-1.jpg" alt="Unsplash">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Web Coding</h5>
-								</div>
-								<div class="card-body">
-									<p class="card-text"></p>
-									<a href="#" class="card-link">Card link</a>
-									<a href="#" class="card-link">Another link</a>
-								</div>
-							</div>
-						</div>
+				
 					</div>
 
 				</div>
