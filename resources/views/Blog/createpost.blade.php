@@ -10,7 +10,7 @@
                 <div class="col-lg-12">
                     <div class="text-content">
                         <h4>Create Post</h4>
-                        <h2>Hi,{{ auth()->user()->name }}</h2>
+                        <h2>Hi, {{ auth()->user()->name }}</h2>
                     </div>
                 </div>
             </div>
@@ -19,8 +19,8 @@
 </div>
 
 <!-- Banner Ends Here -->
-<div class="mt-4">
-    <div class="col-12 col-lg-6">
+<div class="container mt-3">
+    <div class="card-deck">
         <div class="card">
             <div class="card-header">
                 <div class="d-flex align-items-center flex-shrink-0 me-3">
@@ -33,6 +33,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <label for="kategori">Pilih Kategori</label>
+                <select name="category_id" class="ml-2">
+                    @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
+                <button class="btn btn-success btn-block mt-2" type="submit">POST</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-12">
             <form action=" {{ route('createpost') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
@@ -69,20 +84,6 @@
                     @enderror
                 </div>
             </form>
-        </div>
-    </div>
-
-    <div class="col-12 col-lg-6">
-        <div class="card">
-            <div class="card-body">
-                <label for="kategori">Pilih Kategori</label>
-                <select name="category_id" class="ml-2">
-                    @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
-                <button class="btn btn-success btn-block mt-2" type="submit">POST</button>
-            </div>
         </div>
     </div>
 </div>
