@@ -39,7 +39,9 @@
                     {{ Auth::user()->name }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <form class="dropdown-item" id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    <a class="dropdown-item text-center" href="#">Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <form class="dropdown-item text-center" id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                         <a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
