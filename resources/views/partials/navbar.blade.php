@@ -20,18 +20,18 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/blogs">Categories</a>
             </li>
             @guest
             @if (Route::has('login'))
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                <a class="nav-link " href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
             @endif
             @else
             <li class="nav-item">
-                <a class="nav-link" href="/about">My Blogs</a>
+                <a class="nav-link" href="/about/{{ auth()->user()->id }}">My Blogs</a>
             </li>
 
             <li class="nav-item dropdown">

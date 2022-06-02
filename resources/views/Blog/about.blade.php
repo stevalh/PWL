@@ -8,8 +8,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-content">
+                    @guest
+                        @if(!Auth::check())
+                        <h4>Welcome to {{ $user->name }}'s Blogs</h4>
+                        @endif
+                        @else
                         <h4>My Blogs</h4>
                         <h2>see all the posts you made!</h2>
+                        @endguest
                     </div>
                 </div>
             </div>
@@ -243,13 +249,15 @@
                                     </div>
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Apa Saja</h5> <!-- Nama -->
+                                    <h5 class="card-title">{{ $user->name }}</h5> <!-- Nama -->
                                     <p class="card-text">Username: apapun</p> <!-- Username -->
-                                    <p class="card-text">Email: apasaja@gmail.com</p> <!-- Email -->
+                                    <p class="card-text">Email: {{ $user->email }}</p> <!-- Email -->
+                                    @if(Auth::check())
                                     <div class="mt-2">
                                         <a href="#" class="card-link fa fa-cogs" style="color: #f48840;"></a>
                                         <a href="ml-3" style="color: #f48840;">Edit Profile</a>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>

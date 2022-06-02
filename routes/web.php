@@ -58,12 +58,10 @@ Route::get('/pagesprofile', function () {
 
 Auth::routes();
 
-Route::get('/about',[BlogController::class,'about'])->name('about');
+Route::get('/about/{id}',[BlogController::class,'about']);
 
 Route::get('/blog/{id}',[BlogController::class,'find']);
 
-
-Route::get('/contact',[BlogController::class,'contact'])->name('contact');
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/create',[CreatePostController::class,'index'])->name('createpost');
 
