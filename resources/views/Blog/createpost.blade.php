@@ -34,6 +34,8 @@
                 </div>
             </div>
         </div>
+        <form action=" {{ route('createpost') }}" method="POST" enctype="multipart/form-data">
+            @csrf
         <div class="card">
             <div class="card-body">
                 <label for="kategori">Pilih Kategori</label>
@@ -42,14 +44,13 @@
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
-                <button class="btn btn-success btn-block mt-2" type="submit">POST</button>
+                <button class="btn btn-warning btn-block mt-2" type="submit" style="background-color: #f48840; color: white;">POST</button>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-lg-12">
-            <form action=" {{ route('createpost') }}" method="POST" enctype="multipart/form-data">
-                @csrf
+
                 <div class="card-body">
                     <div class="form-group">
                         <label for="judul">Judul Post</label>
@@ -82,6 +83,7 @@
                         {{ $message }}
                     </div>
                     @enderror
+
                 </div>
             </form>
         </div>

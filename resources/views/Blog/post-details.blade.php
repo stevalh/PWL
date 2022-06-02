@@ -20,7 +20,7 @@
 <!-- Banner Ends Here -->
 
 <section class="blog-posts grid-system">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-lg-8">
                 <div class="all-blog-posts">
@@ -150,21 +150,16 @@
                 </div>
             </div>
 
-
             <div class="col-lg-4">
-                <div class="card">
-                    <a class="btn btn-outline-success" href="{{ route('createpost') }}" role="button">
-                        <i>Buat Post</i>
-                    </a>
-                </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Let's make your version post</h5>
-                      <p class="card-text">Interested in making a post that helps a lot of people?</p>
-                      <a href="{{ route('createpost') }}" class="btn btn-primary">Create A Post</a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Let's make your version post</h5>
+                        <p class="card-text">Interested in making a post that helps a lot of people?</p>
+                        <a href="{{ route('createpost') }}" class="btn btn-warning btn-block mt-2" role="button" style="background-color: #f48840; color: white;">Create A
+                        Post</a>
                     </div>
-                  </div>
+
+                </div>
             </div>
         </div>
     </div>
