@@ -51,11 +51,16 @@
                                                 {{-- <li><a href="#">12 Comments</a></li> --}}
                                             </ul>
                                         </div>
+
+                                        @if(Auth::check())
+                                            @if(auth()->user()->id == $user->id)
                                         <div class="col-lg-2">
                                             <ul class="social-icons mt-5">
-                                                <li><a href="#"><i class="fa fa-lg fa-trash" style="color: red"></i></a></li>
+                                                <li><a href="/deletepost/{{ $post->id }}"><i class="fa fa-lg fa-trash" style="color: red"></i></a></li>
                                             </ul>
                                         </div>
+                                            @endif
+                                        @endif
                                     </div>
                                 </div>
                             </div>

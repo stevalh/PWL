@@ -23,6 +23,12 @@ class BlogController extends Controller
         return view('Blog.about',compact('user','posts'));
     }
 
+    public function deletepost($id)
+    {
+        $post=Post::findorFail($id);
+        $post->delete();
+        return redirect()->back();
+    }
 
 
    

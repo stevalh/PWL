@@ -20,6 +20,7 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/blogs',[BlogController::class,'blog'])->name('myblogs');
+Route::get('/deletepost/{id}',[BlogController::class,'deletepost']);
 
 
 Route::get('/profile',[ProfileController::class,'index']);
