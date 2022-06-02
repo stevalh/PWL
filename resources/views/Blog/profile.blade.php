@@ -17,11 +17,10 @@
                                 <div class="card-header">
                                     Profile
                                 </div>
-                                <div class="row">
-                                    <div class="col-1 col-lg-1"></div>
-                                    <div class="col-8 col-lg-6"><img style="width: 75;height:75;"
-                                            src="{{ auth()->user()->image }}"
-                                            class="rounded-circle" alt="...">
+                                <div class="row mt-3">
+                                    <div class="col-2 col-lg-3"></div>
+                                    <div class="col-8 col-lg-6">
+                                        <img src="{{ auth()->user()->image }}" class="img-fluid" alt="...">
                                     </div>
                                 </div>
                                 <div class="card-body text-center">
