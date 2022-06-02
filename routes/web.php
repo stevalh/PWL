@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CreatePostController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,10 @@ use App\Http\Controllers\CreatePostController;
 Route::get('/blogs',[BlogController::class,'blog'])->name('myblogs');
 
 
-Route::get('/profile', function () {
-    return view('blog.profile');
-});
+Route::get('/profile',[ProfileController::class,'index']);
+
+
+
 
 // admin (not completed)
 Route::get('/admin-panel', function () {

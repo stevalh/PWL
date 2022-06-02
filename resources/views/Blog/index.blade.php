@@ -21,7 +21,7 @@
                             <ul class="post-info">
 
                                 {{-- <li><a href="#">Admin</a></li> --}}
-                                <li><a href="#">{{ $banner->user->name }}</a></li>
+                                <li><a href="/about/{{ $banner->user->id }}">{{ $banner->user->name }}</a></li>
                                 <li><a href="#">{{ $banner->created_at }}</a></li>
                                 {{-- <li><a href="#">12 Comments</a></li> --}}
                             </ul>
@@ -54,7 +54,7 @@
                                             <h4>{{ $post->title }}</h4>
                                         </a>
                                         <ul class="post-info">
-                                            <li><a href="#">{{ $post->user->name }}</a></li>
+                                            <li><a href="/about/{{ $post->user->id }}">{{ $post->user->name }}</a></li>
                                             <li><a href="#">{{ $post->created_at }}</a></li>
                                             {{-- <li><a href="#">12 Comments</a></li> --}}
                                         </ul>
@@ -120,24 +120,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="sidebar-item tags">
-                                    <div class="sidebar-heading">
-                                        <h2>Tag Clouds</h2>
-                                    </div>
-                                    <div class="content">
-                                        <ul>
-                                            <li><a href="#">HTML</a></li>
-                                            <li><a href="#">CSS</a></li>
-                                            <li><a href="#">JavaScript</a></li>
-                                            <li><a href="#">PHP</a></li>
-                                            <li><a href="#">MySQL</a></li>
-                                            <li><a href="#">Bootstrap</a></li>
-                                            <li><a href="#">Laravel</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

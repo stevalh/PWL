@@ -36,12 +36,12 @@
                                         <h4>{{ $post->title }}</h4>
                                     </a>
                                     <ul class="post-info">
-                                        <li><a href="#">{{ $post->user->name }}</a></li>
+                                        <li><a href="/about/{{ $post->user->id }}">{{ $post->user->name }}</a></li>
                                         <li><a href="#">{{ $post->created_at }}</a></li>
                                         {{-- <li><a href="#">10 Comments</a></li> --}}
                                     </ul>
-                                    {!! $post->content !!}
                                 </div>
+                                {!! $post->content !!}
                             </div>
                         </div>
 
