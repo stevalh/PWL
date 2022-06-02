@@ -31,29 +31,38 @@
                 <div class="all-blog-posts">
                     <div class="row">
                        @foreach($posts as $post)
-                        
+
                         <div class="col-lg-6">
                             <div class="blog-post">
                                 <div class="blog-thumb">
                                     <img src="{{ asset('storage/'.$post->thumb) }}" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <span>{{ $post->category->name }}</span>
+
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <ul class="post-info">
+                                                <span>{{ $post->category->name }}</span>
                                     <a href="/blog/{{ $post->id }}">
                                         <h4>{{ $post->title }}</h4>
                                     </a>
-                                    <ul class="post-info">
-                                        <li><a href="/about/{{ $post->user->id }}">{{ $post->user->name }}</a></li>
-                                        <li><a href="#">{{ $post->created_at }}</a></li>
-                                        {{-- <li><a href="#">12 Comments</a></li> --}}
-                                    </ul>
-                                    
+                                                <li><a href="/about/{{ $post->user->id }}">{{ $post->user->name }}</a></li>
+                                                <li><a href="#">{{ $post->created_at }}</a></li>
+                                                {{-- <li><a href="#">12 Comments</a></li> --}}
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <ul class="social-icons mt-5">
+                                                <li><a href="#"><i class="fa fa-lg fa-trash" style="color: red"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                     
+
                         @endforeach
-                  
+
                     </div>
                     {{ $posts->links() }}
                 </div>
