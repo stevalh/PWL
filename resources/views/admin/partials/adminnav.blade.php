@@ -163,7 +163,7 @@
                         alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1"
+                    <a class="dropdown-item" href="/pagesprofile"><i class="align-middle me-1"
                             data-feather="user"></i> Profile</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Log out</a>
