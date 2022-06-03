@@ -50,10 +50,7 @@ Route::get('/makecategory/hapus/{id}',[setCategory::class,'hapus']);
 Route::get('/trashcategory',[setCategory::class,'trash']);
 Route::get('/makecategory/restore/{id}',[setCategory::class,'restore']);
 Route::get('/makecategory/hapuspermanen/{id}',[setCategory::class,'hapuspermanen']);
-
-Route::get('/makepost', function () {
-    return view('admin.makepost');
-});
+Route::get('/makepost',[setCategory::class,'selectcategory']);
 
 Route::get('/pagesprofile', function () {
     return view('admin.pages-profile');
@@ -62,7 +59,6 @@ Route::get('/pagesprofile', function () {
 Route::get('/trashcomment',function(){
     return view('admin.trashcomment');
 });
-
 
 
 // end of admin (not completed)
