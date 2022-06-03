@@ -23,9 +23,10 @@ class HomeController extends Controller
     {
         $banners=Post::all()->take(5);
         $posts=Post::paginate(2);// paginate yg ini aja
+        $recents=Post::orderBy('created_at','DESC')->get()->take(3);
         // $sidebar=Post::all()//Paginate klo maau
 
-        return view('Blog.index',compact('banners','posts'));
+        return view('Blog.index',compact('banners','posts','recents'));
     }
 }
 

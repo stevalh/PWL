@@ -71,36 +71,27 @@
                 <div class="sidebar">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="sidebar-item search">
-                                <form id="search_form" name="gs" method="GET" action="#">
-                                    <input type="text" name="q" class="searchText" placeholder="TYPE TO SEARCH..."
-                                        autocomplete="on">
-                                </form>
-                            </div>
+                           
                         </div>
                         <div class="col-lg-12">
                             <div class="sidebar-item recent-posts">
                                 <div class="sidebar-heading">
                                     <h2>Recent Posts</h2>
                                 </div>
-                                <div class="content">
-                                    <ul>
-                                        <li><a href="post-details.html">
-                                                <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
-                                                <span>May 31, 2020</span>
-                                            </a></li>
-                                        <li><a href="post-details.html">
-                                                <h5>Suspendisse et metus nec libero ultrices varius eget in risus
-                                                </h5>
-                                                <span>May 28, 2020</span>
-                                            </a></li>
-                                        <li><a href="post-details.html">
-                                                <h5>Swag hella echo park leggings, shaman cornhole ethical coloring
-                                                </h5>
-                                                <span>May 14, 2020</span>
-                                            </a></li>
+                                @foreach($recents as $recent)
+                                <div class="down-content">
+                                    <span>{{ $recent->category->name }}</span>
+                                    <a href="/blog/{{ $recent->id }}">
+                                        <h4>{{ $recent->title }}</h4>
+                                    </a>
+                                    <ul class="post-info">
+                                        <li><a href="/about/{{ $recent->user->id }}"><small>{{ $recent->user->name }}</small></a></li>
+                                        <li><a href="#"><small>{{ $recent->created_at }}</small></a></li>
+                                        {{-- <li><a href="#">12 Comments</a></li> --}}
                                     </ul>
+
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="col-lg-12">
