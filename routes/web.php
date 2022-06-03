@@ -25,8 +25,9 @@ Route::get('/deletepost/{id}',[BlogController::class,'deletepost']);
 
 Route::get('/profile',[ProfileController::class,'index']);
 
-
-
+Route::get('/editprofile', function () {
+    return view('Blog.editprofile');
+});
 
 // admin (not completed)
 Route::get('/admin-panel', function () {
