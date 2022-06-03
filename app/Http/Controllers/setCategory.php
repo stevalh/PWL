@@ -61,13 +61,13 @@ class setCategory extends Controller
     {
         $make_categories= MakeCategory::onlyTrashed() -> where('id',$id);
         $make_categories -> restore();
-        return redirect('/makecategory/trash');
+        return redirect('/trashcategory');
     }
 
     public function hapuspermanen($id)
     {
         $make_categories = MakeCategory::onlyTrashed()->where('id',$id);
         $make_categories -> forceDelete();
-        return redirect('/makecategory/trash');
+        return redirect('/trashcategory');
     }
 }

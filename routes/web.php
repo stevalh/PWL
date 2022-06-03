@@ -47,7 +47,7 @@ Route::get('/addcategory',[setCategory::class,'add']);
 Route::post('/addcategory/post',[setCategory::class,'post']);
 Route::get('/makecategory',[setCategory::class,'make']);
 Route::get('/makecategory/hapus/{id}',[setCategory::class,'hapus']);
-Route::get('/makecategory/trash',[setCategory::class,'trash']);
+Route::get('/trashcategory',[setCategory::class,'trash']);
 Route::get('/makecategory/restore/{id}',[setCategory::class,'restore']);
 Route::get('/makecategory/hapuspermanen/{id}',[setCategory::class,'hapuspermanen']);
 
@@ -57,10 +57,6 @@ Route::get('/makepost', function () {
 
 Route::get('/pagesprofile', function () {
     return view('admin.pages-profile');
-});
-
-Route::get('/trashcategory',function(){
-    return view('admin.trashcategory');
 });
 
 Route::get('/trashcomment',function(){

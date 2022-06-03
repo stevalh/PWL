@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('file');
             $table->string('jenis');
             $table->text('keterangan');
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }
