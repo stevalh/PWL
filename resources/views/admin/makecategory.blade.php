@@ -18,6 +18,8 @@
 	<title>AllT Blog - Admin Panel | Category</title>
 
 	<link href="css/admincss/css/app.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -55,6 +57,13 @@
 					</li>
 
 					<li class="sidebar-item">
+						<a class="sidebar-link" href="/addcategory">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Add Category</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="/makecategory">
 							<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Category</span>
 						</a>
@@ -71,6 +80,20 @@
 						<a class="sidebar-link" href="/approvepost">
 							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Approve
 								Post</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/trashcategory">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Trash Category</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/trashcomment">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Trash Comment</span>
 						</a>
 					</li>
 				</ul>
@@ -111,7 +134,7 @@
 											</div>
 										</div>
 									</a>
-									
+
 								</div>
 								<div class="dropdown-menu-footer">
 									<a href="#" class="text-muted">Show all notifications</a>
@@ -229,28 +252,39 @@
 
 					<div class="mb-3">
 						<h1 class="h3 d-inline align-middle">Category</h1>
-						<a class="badge bg-dark text-white ms-2" href="upgrade-to-pro.html">
+						<a class="badge bg-dark text-white ms-2" href="/addcategory">
 							Add Category
 						</a>
+
+					<a href ="/makecategory/trash">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width = "20px" class ="mx-4">
+							<!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+							<path
+								d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z" />
+						</svg>
+					</a>
 					</div>
+					@foreach($make_categories as $c)
 					<div class="row">
 						<div class="col-6 col-md-4">
 							<div class="card">
-								<img class="card-img-top" src="images/admin-img/img/photos/unsplash-1.jpg" alt="Unsplash">
+								<img class="card-img-top" src="{{url('/data_file_category/'.$c->file)}}"
+									alt="Gambar Kategori">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Cooking</h5>
+									<h5 class="card-title mb-0">{{$c -> jenis}}</h5>
+									<p class="card-text">{{$c -> keterangan}}</p>
 								</div>
 								<div class="card-body">
 									<p class="card-text"></p>
-									<a href="#" class="card-link">Update</a>
-									<a href="#" class="card-link">Delete</a>
+									<a href="/makecategory/hapus/{{$c->id}}" class="card-link">Delete</a>
 								</div>
+								<p class="mx-3">{{$c -> updated_at}}</p>
 							</div>
 						</div>
-				
 					</div>
-
+					@endforeach
 				</div>
+				{{$make_categories->links()}}
 			</main>
 
 			<footer class="footer">
@@ -258,8 +292,8 @@
 					<div class="row text-muted">
 						<div class="col-6 text-start">
 							<p class="mb-0">
-								<a class="text-muted" href="https://adminkit.io/"
-									target="_blank"><strong>Admin Panel</strong></a> &copy;
+								<a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Admin
+										Panel</strong></a> &copy;
 							</p>
 						</div>
 						<div class="col-6 text-end">
@@ -285,7 +319,8 @@
 	</div>
 
 	<script src="js/adminjs/js/app.js"></script>
-
+	<script src="/js/bootstrap.min.js"></script>
+	<script src ="js/app.js"> </src>
 </body>
 
 </html>

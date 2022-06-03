@@ -55,6 +55,13 @@
 					</li>
 
 					<li class="sidebar-item">
+						<a class="sidebar-link" href="/addcategory">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Add Category</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="/makecategory">
 							<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Category</span>
 						</a>
@@ -71,6 +78,20 @@
 						<a class="sidebar-link" href="/approvepost">
 							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Approve
 								Post</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/trashcategory">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Trash Category</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/trashcomment">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Trash Comment</span>
 						</a>
 					</li>
 				</ul>

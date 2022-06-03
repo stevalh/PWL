@@ -55,6 +55,13 @@
 					</li>
 
 					<li class="sidebar-item">
+						<a class="sidebar-link" href="/addcategory">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Add Category</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="/makecategory">
 							<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Category</span>
 						</a>
@@ -71,6 +78,20 @@
 						<a class="sidebar-link" href="/approvepost">
 							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Approve
 								Post</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/trashcategory">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Trash Category</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/trashcomment">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
+								Trash Comment</span>
 						</a>
 					</li>
 				</ul>
@@ -230,7 +251,27 @@
 					<div class="mb-3">
 						<h1 class="h3 d-inline align-middle">Category yang sudah dihapus</h1>
 				
-
+						@foreach($make_categories as $c)
+					<div class="row">
+						<div class="col-6 col-md-4">
+							<div class="card">
+								<img class="card-img-top" src="{{url('/data_file_category/'.$c->file)}}"
+									alt="Gambar Kategori">
+								<div class="card-header">
+									<h5 class="card-title mb-0">{{$c -> jenis}}</h5>
+									<p class="card-text">{{$c -> keterangan}}</p>
+								</div>
+								<div class="card-body">
+									<p class="card-text"></p>
+									<a href="/makecategory/restore/{{$c -> id}}" class="card-link">Restore</a>
+									<a href="/makecategory/hapuspermanen/{{$c -> id}}" class="card-link">Hapus Permanen</a>
+								</div>
+								<p class="mx-3">{{$c -> updated_at}}</p>
+							</div>
+						</div>
+					</div>
+					@endforeach
+					</div>
 				</div>
 			</main>
 

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('file');
             $table->string('jenis');
+            $table->text('keterangan');
             $table->timestamps();
         });
     }
