@@ -20,15 +20,15 @@
                                 <div class="row mt-3">
                                     <div class="col-2 col-lg-3"></div>
                                     <div class="col-8 col-lg-6">
-                                        <img src="{{ auth()->user()->image }}" class="img-fluid" alt="...">
+                                        <img src="storage/{{ auth()->user()->image }}" class="img-fluid" alt="...">
                                     </div>
                                 </div>
                                 <div class="card-body text-center">
                                     <h5 class="card-title">{{ auth()->user()->name }}</h5> <!-- Nama -->
                                     <p class="card-text">Email: {{ auth()->user()->email }}</p> <!-- Email -->
                                     <div class="mt-2">
-                                        <a href="#" class="card-link fa fa-cogs" style="color: #f48840;"></a>
-                                        <a href="ml-3" style="color: #f48840;">Edit Profile</a>
+                                        <a href="/editprofile" class="card-link fa fa-cogs" style="color: #f48840;"></a>
+                                        <a href="/editprofile" style="color: #f48840;">Edit Profile</a>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                       <h5 class="card-title">{{ auth()->user()->name }}</h5> <!-- Nama -->
                       <p class="card-text mt-2">Email</p>
                       <h5 class="card-title">{{ auth()->user()->email }}</h5> <!-- Email -->
-                      <a href="#" class="btn btn-warning mt-2" style="background-color: #f48840; color: white;">Edit Profile</a>
+                      <a href="/editprofile" class="btn btn-warning mt-2" style="background-color: #f48840; color: white;">Edit Profile</a>
                     </div>
                   </div>
             </div>

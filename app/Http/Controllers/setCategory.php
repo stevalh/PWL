@@ -40,7 +40,7 @@ class setCategory extends Controller
 
     public function make()
     {
-        $make_categories = DB::table('make_categories')->paginate(4);
+        $make_categories = DB::table('make_categories')->paginate(2);
         return view('admin.makecategory',['make_categories'=> $make_categories]);
     }
 
@@ -69,5 +69,11 @@ class setCategory extends Controller
         $make_categories = MakeCategory::onlyTrashed()->where('id',$id);
         $make_categories -> forceDelete();
         return redirect('/trashcategory');
+    }
+
+    public function selectcategory()
+    {
+        $make_categories= DB::table('make_categories')->get();
+        return view('admin.makepost',['make_categories' => $make_categories]);
     }
 }

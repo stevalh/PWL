@@ -83,7 +83,7 @@
                                 <div class="row mt-3">
                                     <div class="col-2 col-lg-3"></div>
                                     <div class="col-8 col-lg-6">
-                                        <img src="/{{ $user->image }}" class="img-fluid" alt="...">
+                                        <img src="/storage/{{ $user->image }}" class="img-fluid" alt="...">
                                     </div>
                                 </div>
                                 <div class="card-body text-center">
@@ -92,8 +92,8 @@
                                     @if(Auth::check())
                                         @if(auth()->user()->id == $user->id)
                                     <div class="mt-2">
-                                        <a href="#" class="card-link fa fa-cogs" style="color: #f48840;"></a>
-                                        <a href="ml-3" style="color: #f48840;">Edit Profile</a>
+                                        <a href="/profile" class="card-link fa fa-cogs" style="color: #f48840;"></a>
+                                        <a href="/profile" style="color: #f48840;">Edit Profile</a>
                                     </div>
                                         @endif
                                     @endif
