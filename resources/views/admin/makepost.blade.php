@@ -279,7 +279,7 @@
 
                     <div class="mb-3">
                         <h1 class="h3 d-inline align-middle">Posting</h1>
-                        <a class="badge bg-dark text-white ms-2" href="makecategory.html">
+                        <a class="badge bg-dark text-white ms-2" href="/addcategory">
                             Click Here to Add Category
                         </a>
                     </div>
@@ -312,10 +312,9 @@
                                 <div class="card-body">
                                     <select class="form-select mb-3">
                                         <option selected>Select category</option>
-                                        <option>Website Coding</option>
-                                        <option>Design</option>
-                                        <option>Lifestyle</option>
-                                        <option>Cooking</option>
+                                        @foreach($make_categories as $c)
+                                        <option>{{$c -> jenis}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
