@@ -38,6 +38,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
+                @if(!empty($message))
+                   <h4 class="mb-3">Searching for : "{{ $message }}"</h4>
+                @elseif(!empty($cate))
+                   <h4 class="mb-3">Category : "{{ $cate }}"</h4>
+                @endif
                 <div class="all-blog-posts">
                     <div class="row">
                         @foreach($posts as $post)
@@ -56,7 +61,7 @@
                                         <li><a href="#">{{ $post->created_at }}</a></li>
                                         {{-- <li><a href="#">12 Comments</a></li> --}}
                                     </ul>
-
+                                    
                                 </div>
                             </div>
                         </div>
@@ -65,13 +70,13 @@
                     </div>
                 </div>
             </div>
-
+            
             {{-- //Sidebar --}}
             <div class="col-lg-4">
                 <div class="sidebar">
                     <div class="row">
                         <div class="col-lg-12">
-                           
+                            
                         </div>
                         <div class="col-lg-12">
                             <div class="sidebar-item recent-posts">
@@ -89,7 +94,7 @@
                                         <li><a href="#"><small>{{ $recent->created_at }}</small></a></li>
                                         {{-- <li><a href="#">12 Comments</a></li> --}}
                                     </ul>
-
+                                    
                                 </div>
                                 @endforeach
                             </div>
@@ -101,14 +106,14 @@
                                 </div>
                                 <div class="content">
                                     <ul>
-                                        <li><a href="#">- Website Coding</a></li>
-                                        <li><a href="#">- Design</a></li>
-                                        <li><a href="#">- Lifestyle</a></li>
-                                        <li><a href="#">- Cooking</a></li>
+                                        @foreach($categories as $category)
+                                        <li><a href="/searchcate/{{ $category->id }}">- {{ $category->name }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                      
                     </div>
                 </div>
             </div>

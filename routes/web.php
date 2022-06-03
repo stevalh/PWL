@@ -71,6 +71,10 @@ Route::get('/about/{id}',[BlogController::class,'about']);
 Route::get('/blog/{id}',[BlogController::class,'find']);
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+Route::post('/search',[HomeController::class,'search'])->name('search');
+
+Route::get('/searchcate/{id}',[HomeController::class,'searchcate'])->name('searchcate');
+
 Route::get('/create',[CreatePostController::class,'index'])->name('createpost');
 
 Route::post('/create',[CreatePostController::class,'createpost'])->name('createpost');

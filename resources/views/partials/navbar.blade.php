@@ -10,8 +10,9 @@
         </button>
         <div class="collapse navbar-collapse mr-5" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline my-2 my-lg-0" method="POST" action="{{ route('search') }}">
+              @csrf
+              <input class="form-control mr-sm-2" name="keywords" type="search" placeholder="Search" aria-label="Search">
             </form>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('home') }}">Home
