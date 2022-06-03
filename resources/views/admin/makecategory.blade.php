@@ -83,19 +83,6 @@
 						</a>
 					</li>
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="/trashcategory">
-							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
-								Trash Category</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="/trashcomment">
-							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
-								Trash Comment</span>
-						</a>
-					</li>
 				</ul>
 			</div>
 		</nav>
@@ -256,35 +243,29 @@
 							Add Category
 						</a>
 
-					<a href ="/trashcategory">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width = "20px" class ="mx-4">
-							<!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-							<path
-								d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z" />
-						</svg>
-					</a>
 					</div>
-					@foreach($make_categories as $c)
 					<div class="row">
+
+					@foreach($categories as $c)
 						<div class="col-6 col-md-4">
 							<div class="card">
-								<img class="card-img-top" src="{{url('/data_file_category/'.$c->file)}}"
-									alt="Gambar Kategori">
+							
 								<div class="card-header">
-									<h5 class="card-title mb-0">{{$c -> jenis}}</h5>
-									<p class="card-text">{{$c -> keterangan}}</p>
+									<h5 class="card-title mb-0">{{$c -> name}}</h5>
 								</div>
 								<div class="card-body">
 									<p class="card-text"></p>
+									<a href="/makecategory/edit/{{$c->id}}" class="card-link">Edit</a>
 									<a href="/makecategory/hapus/{{$c->id}}" class="card-link">Delete</a>
+									<p class="mx-3">{{$c -> created_at}}</p>
 								</div>
-								<p class="mx-3">{{$c -> updated_at}}</p>
+								
 							</div>
 						</div>
-					</div>
 					@endforeach
+					</div>
 				</div>
-				{{$make_categories->links()}}
+				{{$categories->links()}}
 			</main>
 
 			<footer class="footer">

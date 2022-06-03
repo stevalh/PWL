@@ -46,13 +46,11 @@ Route::get('/cekkomentar', function () {
 use App\Http\Controllers\setCategory;
 Route::get('/addcategory',[setCategory::class,'add']);
 Route::post('/addcategory/post',[setCategory::class,'post']);
-Route::get('/makecategory',[setCategory::class,'make']);
-Route::get('/makecategory/hapus/{id}',[setCategory::class,'hapus']);
-Route::get('/trashcategory',[setCategory::class,'trash']);
-Route::get('/makecategory/restore/{id}',[setCategory::class,'restore']);
-Route::get('/makecategory/hapuspermanen/{id}',[setCategory::class,'hapuspermanen']);
+Route::get('/makecategory',[setCategory::class,'showcategory']);
+Route::get('/makecategory/edit/{id}',[setCategory::class,'edit']);
+Route::post('/makecategory/update',[setCategory::class,'update']);
+Route::get('/makecategory/hapus/{id}',[setCategory::class,'hapuscategory']);
 Route::get('/makepost',[setCategory::class,'selectcategory']);
-
 Route::get('/pagesprofile', function () {
     return view('admin.pages-profile');
 });

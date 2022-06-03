@@ -81,19 +81,6 @@
 						</a>
 					</li>
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="/trashcategory">
-							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
-								Trash Category</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="/trashcomment">
-							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
-								Trash Comment</span>
-						</a>
-					</li>
 				</ul>
 			</div>
 		</nav>

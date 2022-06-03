@@ -13,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" href="images/admin-img/img/icons/icon-48x48.png" />
 
-    <link rel="canonical" href="https://demo-basic.adminkit.io/ui-cards.html" />
+    <link rel="canonical" href="https://demo-basic.adminkit.io/ui-forms.html" />
 
-    <title>AllT Blog - Admin Panel | Comment</title>
+    <title>AllT Blog - Admin Panel | Post</title>
 
     <link href="css/admincss/css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -253,13 +253,6 @@
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1"
                                         data-feather="user"></i> Profile</a>
-                                <a class="dropdown-item" href="#"><i class="align-middle me-1"
-                                        data-feather="pie-chart"></i> Analytics</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="index.html"><i class="align-middle me-1"
-                                        data-feather="settings"></i> Settings & Privacy</a>
-                                <a class="dropdown-item" href="#"><i class="align-middle me-1"
-                                        data-feather="help-circle"></i> Help Center</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Log out</a>
                             </div>
@@ -268,63 +261,53 @@
                 </div>
             </nav>
 
-            <main class="content">
-                <div class="container-fluid p-0">
+            <div class="content">
 
-                    <div class="mb-3">
-                        <h1 class="h3 d-inline align-middle">Comment</h1>
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-md-10">
+            
+            
+                      <div class="row justify-content-center">
+                        <div class="col-md-6">
+            
+                          <h3 class="heading mb-4">Tambah Kategori</h3>
+                          <p>Silakan tambahkan kategori yang diinginkan!</p>
+            
+                          <p><img src="images/admin-img/img/icons/undraw-contact.svg" alt="Image" class="img-fluid"></p>
+            
+            
+                        </div>
+                        <div class="col-md-6">
+                            @foreach($categories as $c)
+                          <form class="mb-5" method="post" id="addForm" name="addForm" action="/makecategory/update">
+                            {{csrf_field()}}
+                            <div class="row">
+                               
+                              <div class="col mx-4 my-3 form-group">
+                                  <input type ="hidden"  name ="id" value ={{$c ->id}}>
+                                <input type="text" class="form-control" name="category_name" value = {{$c -> name}}>
+                              </div>
+                             
+                            </div>
+            
+                            <div class="row">
+                              <div class="col-12 mx-4 my-3">
+                                <input type="submit" value="Update" class="btn btn-primary rounded-0 py-2 px-4">
+                                <span class="submitting"></span>
+                              </div>
+                            </div>
+
+                          </form>
+             @endforeach
+                         
+            
+                        </div>
+                      </div>
                     </div>
-                    <div class="row">
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">User-1</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">I love this page</p>
-                                    <a href="#" class="card-link">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">User-2</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">I have been try to do this but it's fake</p>
-                                    <a href="#" class="card-link">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">User-5</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">I used to do this things before</p>
-                                    <a href="#" class="card-link">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">User-3</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">LOL</p>
-                                    <a href="#" class="card-link">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-            </main>
+              </div>
 
             <footer class="footer">
                 <div class="container-fluid">

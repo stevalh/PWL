@@ -81,19 +81,6 @@
 						</a>
 					</li>
 
-                    <li class="sidebar-item">
-						<a class="sidebar-link" href="/trashcategory">
-							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
-								Trash Category</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="/trashcomment">
-							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
-								Trash Comment</span>
-						</a>
-					</li>
 				</ul>
 			</div>
 		</nav>
@@ -312,8 +299,8 @@
                                 <div class="card-body">
                                     <select class="form-select mb-3">
                                         <option selected>Select category</option>
-                                        @foreach($make_categories as $c)
-                                        <option>{{$c -> jenis}}</option>
+                                        @foreach($categories as $c)
+                                        <option>{{$c -> name}}</option>
                                         @endforeach
                                     </select>
                                 </div>

@@ -81,19 +81,6 @@
 						</a>
 					</li>
 
-                    <li class="sidebar-item">
-						<a class="sidebar-link" href="/trashcategory">
-							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
-								Trash Category</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="/trashcomment">
-							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">
-								Trash Comment</span>
-						</a>
-					</li>
 				</ul>
 			</div>
 		</nav>
@@ -304,19 +291,7 @@
                             {{csrf_field()}}
                             <div class="row">
                               <div class="col mx-4 my-3 form-group">
-                                <input type="text" class="form-control" name="jenis" id="jenis" placeholder="Jenis konten">
-                              </div>
-                            </div>
-            
-                            <div class="row">
-                              <div class="col mx-4 my-3 form-group">
-                                <input type="file" class="form-control" name="file">
-                              </div>
-                            </div>
-            
-                            <div class="row">
-                              <div class="col mx-4 my-3 form-group">
-                                <textarea class="form-control" name="keterangan" placeholder="Keterangan Tambahan"></textarea>
+                                <input type="text" class="form-control" name="category_name" placeholder="Jenis konten">
                               </div>
                             </div>
             
@@ -328,7 +303,7 @@
                             </div>
                           </form>
             
-                          <div id="form-message-warning mt-4"></div>
+                         
             
                         </div>
                       </div>
