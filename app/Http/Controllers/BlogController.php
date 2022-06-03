@@ -5,22 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
 
     
-    public function blog()
-    {
-        return view('Blog.blog');
-    }
+    // public function blog()
+    // {
+    //     return view('Blog.blog');
+    // }
 
     public function about($id)
     {
+        $categories=Category::all();
         $user=User::find($id);
         $posts=$user->posts()->paginate(2);
-        return view('Blog.about',compact('user','posts'));
+        return view('Blog.about',compact('user','posts','categories'));
     }
 
     public function deletepost($id)
@@ -38,7 +40,8 @@ class BlogController extends Controller
     public function find($id)
     {
         $post=Post::findorFail($id);
-        return view ('Blog.post-details',compact('post'));
+        $categories=Category::all();
+        return view ('Blog.post-details',compact('post','categories'));
     }
 
    

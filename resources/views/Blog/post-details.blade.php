@@ -31,7 +31,7 @@
                                     <img src="images/blog-post-02.jpg" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <span>{{ $post->category->name }}</span>
+                                    <a href="/searchcate/{{ $post->category->id }}"><span>{{ $post->category->name }}</span></a>
                                     <a href="post-details.html">
                                         <h4>{{ $post->title }}</h4>
                                     </a>
