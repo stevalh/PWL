@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\MakeCategory;
+use App\Models\Category;
 
 class setCategory extends Controller
 {
@@ -47,6 +47,12 @@ class setCategory extends Controller
     {
         DB::table('categories')->where('id',$id) ->delete();
         return redirect('/makecategory')->with('success','Delete successfully');
+    }
+
+    public function selectcategory()
+    {
+        $categories = DB::table('categories')->get();
+        return view('admin.makepost',['categories'=> $categories]);
     }
 }
 
