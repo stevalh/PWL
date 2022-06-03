@@ -4,31 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
 
-
-   
-    public function __construct()
-    {
-        $this->middleware(['auth']);
-    }
     
     public function blog()
     {
         return view('Blog.blog');
     }
 
-    public function about()
+    public function about($id)
     {
-        return view('Blog.about');
+        $user=User::find($id);
+        $posts=$user->posts()->paginate(2);
+        return view('Blog.about',compact('user','posts'));
     }
 
-    public function contact()
+    public function deletepost($id)
     {
-        return view('Blog.contact');
+        $post=Post::findorFail($id);
+        $post->delete();
+        return redirect()->back();
     }
+
 
    
 

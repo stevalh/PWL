@@ -20,18 +20,18 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/blogs">Categories</a>
             </li>
             @guest
             @if (Route::has('login'))
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                <a class="nav-link " href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
             @endif
             @else
             <li class="nav-item">
-                <a class="nav-link" href="/about">My Blogs</a>
+                <a class="nav-link" href="/about/{{ auth()->user()->id }}">My Blogs</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -39,7 +39,10 @@
                     {{ Auth::user()->name }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <form class="dropdown-item" id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+
+                    <a class="dropdown-item text-center" href="/profile">Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <form class="dropdown-item text-center" id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                         <a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}

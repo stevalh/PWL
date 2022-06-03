@@ -8,8 +8,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-content">
+                    @guest
+                        @if(!Auth::check())
+                        <h4>Welcome to {{ $user->name }}'s Blogs</h4>
+                        @endif
+                        @else
                         <h4>My Blogs</h4>
                         <h2>see all the posts you made!</h2>
+                        @endguest
                     </div>
                 </div>
             </div>
@@ -24,235 +30,73 @@
             <div class="col-lg-8">
                 <div class="all-blog-posts">
                     <div class="row">
+                       @foreach($posts as $post)
+
                         <div class="col-lg-6">
                             <div class="blog-post">
                                 <div class="blog-thumb">
-                                    <img src="images/blog-thumb-01.jpg" alt="">
+                                    <img src="{{ asset('storage/'.$post->thumb) }}" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <span>Lifestyle</span>
-                                    <a href="post-details.html">
-                                        <h4>Donec tincidunt leo</h4>
+
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <ul class="post-info">
+                                                <span>{{ $post->category->name }}</span>
+                                    <a href="/blog/{{ $post->id }}">
+                                        <h4>{{ $post->title }}</h4>
                                     </a>
-                                    <ul class="post-info">
-                                        <li><a href="#">Admin</a></li>
-                                        <li><a href="#">May 31, 2020</a></li>
-                                        <li><a href="#">12 Comments</a></li>
-                                    </ul>
-                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
-                                        mauris sit amet
-                                        eleifend.</p>
-                                    <div class="post-options">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <ul class="post-tags">
-                                                    <li><i class="fa fa-tags"></i></li>
-                                                    <li><a href="#">Best Templates</a>,</li>
-                                                    <li><a href="#">TemplateMo</a></li>
-                                                </ul>
-                                            </div>
+                                                <li><a href="/about/{{ $post->user->id }}">{{ $post->user->name }}</a></li>
+                                                <li><a href="#">{{ $post->created_at }}</a></li>
+                                                {{-- <li><a href="#">12 Comments</a></li> --}}
+                                            </ul>
                                         </div>
+
+                                        @if(Auth::check())
+                                            @if(auth()->user()->id == $user->id)
+                                        <div class="col-lg-2">
+                                            <ul class="social-icons mt-5">
+                                                <li><a href="/deletepost/{{ $post->id }}"><i class="fa fa-lg fa-trash" style="color: red"></i></a></li>
+                                            </ul>
+                                        </div>
+                                            @endif
+                                        @endif
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    <img src="images/blog-thumb-02.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <span>Lifestyle</span>
-                                    <a href="post-details.html">
-                                        <h4>Suspendisse et metus</h4>
-                                    </a>
-                                    <ul class="post-info">
-                                        <li><a href="#">Admin</a></li>
-                                        <li><a href="#">May 22, 2020</a></li>
-                                        <li><a href="#">26 Comments</a></li>
-                                    </ul>
-                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
-                                        mauris sit amet
-                                        eleifend.</p>
-                                    <div class="post-options">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <ul class="post-tags">
-                                                    <li><i class="fa fa-tags"></i></li>
-                                                    <li><a href="#">Best Templates</a>,</li>
-                                                    <li><a href="#">TemplateMo</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    <img src="images/blog-thumb-03.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <span>Lifestyle</span>
-                                    <a href="post-details.html">
-                                        <h4>Donec tincidunt leo</h4>
-                                    </a>
-                                    <ul class="post-info">
-                                        <li><a href="#">Admin</a></li>
-                                        <li><a href="#">May 18, 2020</a></li>
-                                        <li><a href="#">42 Comments</a></li>
-                                    </ul>
-                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
-                                        mauris sit amet
-                                        eleifend.</p>
-                                    <div class="post-options">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <ul class="post-tags">
-                                                    <li><i class="fa fa-tags"></i></li>
-                                                    <li><a href="#">Best Templates</a>,</li>
-                                                    <li><a href="#">TemplateMo</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    <img src="images/blog-thumb-04.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <span>Lifestyle</span>
-                                    <a href="post-details.html">
-                                        <h4>Mauris ac dolor ornare</h4>
-                                    </a>
-                                    <ul class="post-info">
-                                        <li><a href="#">Admin</a></li>
-                                        <li><a href="#">May 16, 2020</a></li>
-                                        <li><a href="#">28 Comments</a></li>
-                                    </ul>
-                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
-                                        mauris sit amet
-                                        eleifend.</p>
-                                    <div class="post-options">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <ul class="post-tags">
-                                                    <li><i class="fa fa-tags"></i></li>
-                                                    <li><a href="#">Best Templates</a>,</li>
-                                                    <li><a href="#">TemplateMo</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    <img src="images/blog-thumb-05.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <span>Lifestyle</span>
-                                    <a href="post-details.html">
-                                        <h4>Donec tincidunt leo</h4>
-                                    </a>
-                                    <ul class="post-info">
-                                        <li><a href="#">Admin</a></li>
-                                        <li><a href="#">May 12, 2020</a></li>
-                                        <li><a href="#">16 Comments</a></li>
-                                    </ul>
-                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
-                                        mauris sit amet
-                                        eleifend.</p>
-                                    <div class="post-options">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <ul class="post-tags">
-                                                    <li><i class="fa fa-tags"></i></li>
-                                                    <li><a href="#">Best Templates</a>,</li>
-                                                    <li><a href="#">TemplateMo</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    <img src="images/blog-thumb-06.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <span>Lifestyle</span>
-                                    <a href="post-details.html">
-                                        <h4>Mauris ac dolor ornare</h4>
-                                    </a>
-                                    <ul class="post-info">
-                                        <li><a href="#">Admin</a></li>
-                                        <li><a href="#">May 10, 2020</a></li>
-                                        <li><a href="#">3 Comments</a></li>
-                                    </ul>
-                                    <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a
-                                        mauris sit amet
-                                        eleifend.</p>
-                                    <div class="post-options">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <ul class="post-tags">
-                                                    <li><i class="fa fa-tags"></i></li>
-                                                    <li><a href="#">Best Templates</a>,</li>
-                                                    <li><a href="#">TemplateMo</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <ul class="page-numbers">
-                                <li><a href="#">1</a></li>
-                                <li class="active"><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                            </ul>
-                        </div>
+
+                        @endforeach
+
                     </div>
+                    {{ $posts->links() }}
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="sidebar">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    <img src="images/blog-thumb-06.jpg" alt="">
+                            <div class="card " style="width: 18rem;">
+                                <div class="card-header">
+                                    Profile
                                 </div>
-                                <div class="down-content">
-                                    <span>Your Profile</span>
-                                        <h4>Name: </h4>
-                                    <ul class="post-info">
-                                        <li><a href="#">Level: user, admin dll</a></li>
-                                        <li><a href="#">email..</a></li>
-                                        <li><a href="#">jlh post ....</a></li>
-                                    </ul>
-                                    <div class="post-options">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <ul class="post-tags">
-                                                    <li><i class="fa fa-cog"></i></li>
-                                                    <li><a href="#" style="color: #f48840">Edit Profile</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                <div class="row mt-3">
+                                    <div class="col-2 col-lg-3"></div>
+                                    <div class="col-8 col-lg-6">
+                                        <img src="/{{ $user->image }}" class="img-fluid" alt="...">
                                     </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{ $user->name }}</h5> <!-- Nama -->
+                                    <p class="card-text">Email: {{ $user->email }}</p> <!-- Email -->
+                                    @if(Auth::check())
+                                        @if(auth()->user()->id == $user->id)
+                                    <div class="mt-2">
+                                        <a href="#" class="card-link fa fa-cogs" style="color: #f48840;"></a>
+                                        <a href="ml-3" style="color: #f48840;">Edit Profile</a>
+                                    </div>
+                                        @endif
+                                    @endif
                                 </div>
                             </div>
                         </div>

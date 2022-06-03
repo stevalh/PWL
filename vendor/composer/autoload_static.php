@@ -552,6 +552,7 @@ class ComposerStaticInit1daf627276b57adc6049cfdb5683be9c
         'App\\Models\\MakeCategory' => __DIR__ . '/../..' . '/app/Models/MakeCategory.php',
         'App\\Models\\Post' => __DIR__ . '/../..' . '/app/Models/Post.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\comment' => __DIR__ . '/../..' . '/app/Models/comment.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

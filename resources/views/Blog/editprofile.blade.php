@@ -15,7 +15,7 @@
                         <div class="col-lg-12">
                             <div class="card " style="width: 18rem;">
                                 <div class="card-header">
-                                    Profile
+                                    Edit Profile
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-2 col-lg-3"></div>
@@ -27,8 +27,15 @@
                                     <h5 class="card-title">{{ auth()->user()->name }}</h5> <!-- Nama -->
                                     <p class="card-text">Email: {{ auth()->user()->email }}</p> <!-- Email -->
                                     <div class="mt-2">
-                                        <a href="#" class="card-link fa fa-cogs" style="color: #f48840;"></a>
-                                        <a href="ml-3" style="color: #f48840;">Edit Profile</a>
+                                        {{-- Edit Foto --}}
+                                        <div class="form-group text-left">
+                                            <label for="thumb">
+                                                <h6>Edit Profile Picture</h6>
+                                            </label>
+                                            <input type="file" class="form-control-file" name="thumb" id="thumb"
+                                                placeholder="Upload thumbnail anda!" required>
+                                        </div>
+                                        {{-- End Edit Foto --}}
                                     </div>
                                 </div>
                             </div>
@@ -39,18 +46,26 @@
             <div class="col-lg-8">
                 <div class="card">
                     <div class="card-header">
-                        Profile Details
+                        Edit Profile Details
                     </div>
                     <div class="card-body">
-                      <p class="card-text">Nama</p>
-                      <h5 class="card-title">{{ auth()->user()->name }}</h5> <!-- Nama -->
-                      <p class="card-text mt-2">Email</p>
-                      <h5 class="card-title">{{ auth()->user()->email }}</h5> <!-- Email -->
-                      <a href="#" class="btn btn-warning mt-2" style="background-color: #f48840; color: white;">Edit Profile</a>
+                        <p class="card-text">Nama</p>
+                        <input class="form-control" type="text" placeholder="{{ auth()->user()->name }}"> {{-- Edit nama
+                        --}}
+                        <p class="card-text mt-2">Email <small>(can't be edited)</small></p>
+                        <input class="form-control" type="text" placeholder="{{ auth()->user()->email }}" readonly> {{--
+                        Email (ga bisa diedit) --}}
+                        <div class="mt-3">
+                            {{-- Simpan Perubahan --}}
+                            <a href="#" class="btn btn-warning" style="background-color: #f48840; color: white;">Save
+                                Changes</a>
+                            {{-- Batalkan perubahan --}}
+                            <a href="#" class="btn btn-warning ml-2"
+                                style="background-color: #f48840; color: white;">Cancel</a>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
-
         </div>
     </div>
 </section>

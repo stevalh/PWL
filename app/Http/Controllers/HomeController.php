@@ -22,7 +22,7 @@ class HomeController extends Controller
     public function index()
     {
         $banners=Post::all()->take(5);
-        $posts=Post::all();// paginate yg ini aja
+        $posts=Post::paginate(2);// paginate yg ini aja
         // $sidebar=Post::all()//Paginate klo maau
 
         return view('Blog.index',compact('banners','posts'));
