@@ -42,7 +42,7 @@
                                     <div class="row">
                                         <div class="col-lg-10">
                                             <ul class="post-info">
-                                                <span>{{ $post->category->name }}</span>
+                                                <a href="/searchcate/{{ $post->category->id }}"><span>{{ $post->category->name }}</span></a>
                                     <a href="/blog/{{ $post->id }}">
                                         <h4>{{ $post->title }}</h4>
                                     </a>

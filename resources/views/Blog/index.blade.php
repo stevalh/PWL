@@ -13,7 +13,7 @@
                 <div class="item-content">
                     <div class="main-content">
                         <div class="meta-category">
-                            <span>{{ $banner->category->name }}</span>
+                           <a href="/searchcate/{{ $banner->category->id }}"> <span>{{ $banner->category->name }}</span></a>
                         </div>
                         <a href="blog/{{ $banner->id }}">
                             <h4>{{ $banner->title }}</h4>
@@ -52,7 +52,7 @@
                                     <img src={{ asset('storage/'.$post->thumb) }} width= "370" height= "340" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <span>{{ $post->category->name }}</span>
+                                    <a href="/searchcate/{{ $post->category->id }}"><span>{{ $post->category->name }}</span></a>
                                     <a href="/blog/{{ $post->id }}">
                                         <h4>{{ $post->title }}</h4>
                                     </a>
@@ -85,7 +85,7 @@
                                 </div>
                                 @foreach($recents as $recent)
                                 <div class="down-content">
-                                    <span>{{ $recent->category->name }}</span>
+                                    <a href="/searchcate/{{ $recent->category->id }}"><span>{{ $recent->category->name }}</span></a>
                                     <a href="/blog/{{ $recent->id }}">
                                         <h4>{{ $recent->title }}</h4>
                                     </a>
