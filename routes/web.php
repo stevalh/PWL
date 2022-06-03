@@ -51,6 +51,7 @@ Route::get('/makecategory/edit/{id}',[setCategory::class,'edit']);
 Route::post('/makecategory/update',[setCategory::class,'update']);
 Route::get('/makecategory/hapus/{id}',[setCategory::class,'hapuscategory']);
 Route::get('/makepost',[setCategory::class,'selectcategory']);
+
 Route::get('/pagesprofile', function () {
     return view('admin.pages-profile');
 });
@@ -76,6 +77,7 @@ Route::get('/searchcate/{id}',[HomeController::class,'searchcate'])->name('searc
 Route::get('/create',[CreatePostController::class,'index'])->name('createpost');
 
 Route::post('/create',[CreatePostController::class,'createpost'])->name('createpost');
+Route::get('/userpost/hapus/{id}',[CreatePostController::class,'hapus']);
 
 
 

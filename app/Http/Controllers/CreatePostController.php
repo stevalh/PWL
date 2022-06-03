@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 
 class CreatePostController extends Controller
 {
@@ -46,4 +47,11 @@ class CreatePostController extends Controller
 
       return redirect()->back()->with('success','Post Berhasil dibuat');
     }
+
+    public function hapus($id)
+    {
+      DB::table('posts') ->where('id',$id) -> delete();
+      return redirect('/');
+    }
+
 }

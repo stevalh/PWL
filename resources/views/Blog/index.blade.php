@@ -60,6 +60,7 @@
                                         <li><a href="/about/{{ $post->user->id }}">{{ $post->user->name }}</a></li>
                                         <li><a href="#">{{ $post->created_at }}</a></li>
                                         {{-- <li><a href="#">12 Comments</a></li> --}}
+                                        <li><a href ="userpost/hapus/{{$post->id}}">Hapus</a></li>
                                     </ul>
                                     
                                 </div>
