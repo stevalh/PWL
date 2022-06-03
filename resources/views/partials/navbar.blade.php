@@ -1,7 +1,7 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="/index">
+      <div class="container-fluid">
+        <a class="navbar-brand ml-5" href="/index">
           <h2>AllT Blog<em>.</em></h2>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -10,6 +10,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('home') }}">Home
                 <span class="sr-only">(current)</span>
