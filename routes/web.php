@@ -43,6 +43,10 @@ Route::get('/cekkomentar', function () {
     return view('admin.cekkomentar');
 });
 
+Route::get('/users', function () {
+    return view('admin.users');
+});
+
 use App\Http\Controllers\setCategory;
 Route::get('/addcategory',[setCategory::class,'add']);
 Route::post('/addcategory/post',[setCategory::class,'post']);

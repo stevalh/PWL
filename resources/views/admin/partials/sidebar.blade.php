@@ -17,7 +17,7 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="">
+                <a class="sidebar-link" href="/users">
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Users</span>
                 </a>
             </li>

@@ -19,6 +19,12 @@
 
     <link href="/css/admincss/css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    {{-- CSS Table --}}
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/tab.css">
+
 </head>
 
 <body>
@@ -256,6 +262,12 @@
         });
     });
     </script>
+
+    {{-- JS Table --}}
+    <script src="/js/tabjs/jquery.min.js"></script>
+	<script src="/js/tabjs/popper.js"></script>
+	<script src="/js/tabjs/bootstrap.min.js"></script>
+	<script src="/js/tabjs/main.js"></script>
 
 </body>
 
