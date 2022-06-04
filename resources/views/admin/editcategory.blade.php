@@ -7,7 +7,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <h3 class="heading mb-4">Tambah Kategori</h3>
-                        <p>Silakan tambahkan kategori yang diinginkan!</p>
+                        <p>Silakan edit kategori yang diinginkan!</p>
                         <p><img src="/images/admin-img/img/icons/undraw-contact.svg" alt="Image" class="img-fluid"></p>
                     </div>
                     <div class="col-md-6">

@@ -39,13 +39,8 @@ Route::get('/approvepost', function () {
     return view('admin.approvepost');
 });
 
-Route::get('/cekkomentar', function () {
-    return view('admin.cekkomentar');
-});
-
-Route::get('/users', function () {
-    return view('admin.users');
-});
+use App\Http\Controllers\UsersController;
+Route::get('/users',[UsersController::class,'show']);
 
 use App\Http\Controllers\setCategory;
 Route::get('/addcategory',[setCategory::class,'add']);

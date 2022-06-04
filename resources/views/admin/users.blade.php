@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">Table #02</h2>
+                <h2 class="heading-section">Table Users</h2>
             </div>
         </div>
         <div class="row">
@@ -13,69 +13,29 @@
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th>ID no.</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th>ID</th>
+                                <th>Name</th>
                                 <th>Email</th>
-                                <th>&nbsp;</th>
+                                <th>Password</th>
+                                <th>Image</th>
+                                <th>Level</th>
+                                <th>Created_at</th>
+                                <th>Updated_at</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($users as $u)
                             <tr class="alert" role="alert">
-                                <th scope="row">001</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>markotto@email.com</td>
-                                <td>
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                                    </a>
-                                </td>
+                                <th scope="row">{{$u ->id}}</th>
+                                <td>{{$u -> name}}</td>
+                                <td>{{$u -> email}}</td>
+                                <td>{{$u -> password}} </td>
+                                <td>{{$u -> image}}</td>
+                                <td>{{$u -> level}}</td>
+                                <td>{{$u -> created_at}} </td>
+                                <td>{{$u -> updated_at}} </td>
                             </tr>
-                            <tr class="alert" role="alert">
-                                <th scope="row">002</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>jacobthornton@email.com</td>
-                                <td>
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="alert" role="alert">
-                                <th scope="row">003</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>larrybird@email.com</td>
-                                <td>
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="alert" role="alert">
-                                <th scope="row">004</th>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td>johndoe@email.com</td>
-                                <td>
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="alert" role="alert">
-                                <th scope="row">005</th>
-                                <td>Gary</td>
-                                <td>Bird</td>
-                                <td>garybird@email.com</td>
-                                <td>
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                                    </a>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
