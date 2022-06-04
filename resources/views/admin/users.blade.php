@@ -16,11 +16,7 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Password</th>
-                                <th>Image</th>
                                 <th>Level</th>
-                                <th>Created_at</th>
-                                <th>Updated_at</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,11 +25,7 @@
                                 <th scope="row">{{$u ->id}}</th>
                                 <td>{{$u -> name}}</td>
                                 <td>{{$u -> email}}</td>
-                                <td>{{$u -> password}} </td>
-                                <td>{{$u -> image}}</td>
                                 <td>{{$u -> level}}</td>
-                                <td>{{$u -> created_at}} </td>
-                                <td>{{$u -> updated_at}} </td>
                             </tr>
                             @endforeach
                         </tbody>
