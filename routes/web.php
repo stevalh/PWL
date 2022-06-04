@@ -35,9 +35,9 @@ Route::get('/admin-panel', function () {
     return view('admin.index');
 });
 
-Route::get('/approvepost', function () {
-    return view('admin.approvepost');
-});
+// Route::get('/approvepost', function () {
+//     return view('admin.approvepost');
+// });
 
 use App\Http\Controllers\UsersController;
 Route::get('/users',[UsersController::class,'show']);
@@ -50,14 +50,15 @@ Route::get('/makecategory/edit/{id}',[setCategory::class,'edit']);
 Route::post('/makecategory/update',[setCategory::class,'update']);
 Route::get('/makecategory/hapus/{id}',[setCategory::class,'hapuscategory']);
 Route::get('/makepost',[setCategory::class,'selectcategory']);
+Route::get('/delpost/{id}',[setCategory::class,'deladminpost']);
 
-Route::get('/pagesprofile', function () {
-    return view('admin.pages-profile');
-});
+// Route::get('/pagesprofile', function () {
+//     return view('admin.pages-profile');
+// });
 
-Route::get('/trashcomment',function(){
-    return view('admin.trashcomment');
-});
+// Route::get('/trashcomment',function(){
+//     return view('admin.trashcomment');
+// });
 
 
 // end of admin (not completed)

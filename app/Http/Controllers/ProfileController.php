@@ -6,6 +6,7 @@ use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Category;
 
 class ProfileController extends Controller
 {
@@ -17,9 +18,10 @@ class ProfileController extends Controller
 
     public function index()
     {
+        $categories=Category::all();
         if(Auth::check())
         {
-            return view('blog.profile');
+            return view('blog.profile',compact('categories'));
         }
         return redirect('/');
     }

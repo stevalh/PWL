@@ -6,9 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
+use App\Models\Post;
 
 class setCategory extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
    public function add()
    {
        return view('admin.addcategory');
@@ -25,7 +32,7 @@ class setCategory extends Controller
 
     public function showcategory()
     {
-        $categories = DB::table('categories')->paginate(9);
+        $categories = DB::table('categories')->paginate(3);
         return view('admin.makecategory',['categories' => $categories]);
     }
 
@@ -51,8 +58,15 @@ class setCategory extends Controller
 
     public function selectcategory()
     {
-        $categories = DB::table('categories')->get();
-        return view('admin.makepost',['categories'=> $categories]);
+        $posts = DB::table('posts')->paginate(3);
+        return view('admin.makepost',['posts'=> $posts]);
+    }
+
+    public function deladminpost($id)
+    {
+        $post=Post::find($id);
+        $post->delete();
+        return redirect()->back()->with('success','Delete successfully');
     }
 }
 
