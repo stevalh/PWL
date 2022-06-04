@@ -17,8 +17,8 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="/pagesprofile">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+                <a class="sidebar-link" href="">
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Users</span>
                 </a>
             </li>
 
@@ -46,13 +46,6 @@
                 <a class="sidebar-link" href="/cekkomentar">
                     <i class="align-middle" data-feather="align-left"></i> <span
                         class="align-middle">Comment</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="/approvepost">
-                    <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Approve
-                        Post</span>
                 </a>
             </li>
 
