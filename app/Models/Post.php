@@ -21,4 +21,9 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class,'category_id');
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class,"comments",'post_id','user_id')->withTimestamps()->withPivot(['parent','comment','id']);
+    }
 }

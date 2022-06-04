@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CreatePostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +79,11 @@ Route::get('/create',[CreatePostController::class,'index'])->name('createpost');
 
 Route::post('/create',[CreatePostController::class,'createpost'])->name('createpost');
 Route::get('/userpost/hapus/{id}',[CreatePostController::class,'hapus']);
+
+Route::post('/send',[CommentController::class,'send'])->name('send');
+Route::post('/reply',[CommentController::class,'reply'])->name('reply');
+
+Route::get('/delcom/{id}',[CommentController::class,'delcom'])->name('delcom');
 
 
 

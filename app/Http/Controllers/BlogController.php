@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\comment;
 use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
@@ -39,9 +40,12 @@ class BlogController extends Controller
 
     public function find($id)
     {
-        $post=Post::findorFail($id);
+        // $post=Post::findorFail($id);
+
+        $post=Post::with('users')->get()->find($id);
         $categories=Category::all();
-        return view ('Blog.post-details',compact('post','categories'));
+        $comments=comment::where('post_id','=',$id)->get();
+        return view ('Blog.post-details',compact('post','categories','comments'));
     }
 
    

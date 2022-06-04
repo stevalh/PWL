@@ -28,10 +28,11 @@ class ProfileController extends Controller
 
     public function edit()
     {
+        $categories=Category::all();
         if(Auth::check())
         {
             
-            return view('Blog.editprofile');
+            return view('Blog.editprofile',compact('categories'));
         }
         return redirect('/');
     }
