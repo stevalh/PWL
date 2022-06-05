@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\comment;
 use App\Models\Category;
 use App\Models\Post;
 
@@ -66,6 +67,19 @@ class setCategory extends Controller
     {
         $post=Post::find($id);
         $post->delete();
+        return redirect()->back()->with('success','Delete successfully');
+    }
+
+    public function viewcom()
+    {
+        $comments=comment::paginate(3);
+        return view('admin.comment',compact('comments'));
+    }
+
+    public function delcomadmin($id)
+    {
+        $comment=comment::findorFail($id);
+        $comment->delete();
         return redirect()->back()->with('success','Delete successfully');
     }
 }
