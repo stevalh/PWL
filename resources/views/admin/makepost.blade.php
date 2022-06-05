@@ -17,7 +17,6 @@
                                 <th>ID</th>
                                 <th>Title</th>
                                 <th>User ID</th>
-                                <th>Content</th>
                                 <th>Category ID</th>
                                 <th>Action</th>
                             </tr>
