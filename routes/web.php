@@ -52,6 +52,8 @@ Route::post('/makecategory/update',[setCategory::class,'update']);
 Route::get('/makecategory/hapus/{id}',[setCategory::class,'hapuscategory']);
 Route::get('/makepost',[setCategory::class,'selectcategory']);
 Route::get('/delpost/{id}',[setCategory::class,'deladminpost']);
+Route::get('/cekkomentar',[setCategory::class,'viewcom']);
+Route::get('/delcomadmin/{id}',[setCategory::class,'delcomadmin']);
 
 // Route::get('/pagesprofile', function () {
 //     return view('admin.pages-profile');
@@ -84,6 +86,8 @@ Route::post('/send',[CommentController::class,'send'])->name('send');
 Route::post('/reply',[CommentController::class,'reply'])->name('reply');
 
 Route::get('/delcom/{id}',[CommentController::class,'delcom'])->name('delcom');
+
+
 
 
 
