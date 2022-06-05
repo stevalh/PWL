@@ -33,11 +33,14 @@
                             </tr>
                             @endforeach
                         </tbody>
+                       
                     </table>
+                  
                 </div>
             </div>
+            {{ $posts->links() }}
         </div>
-    </div>
+    </div>        
 </section>
 
 @endsection

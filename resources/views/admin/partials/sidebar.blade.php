@@ -15,7 +15,14 @@
                         class="align-middle">Back To AlltBlogs</span>
                 </a>
             </li>
-
+            
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="/admin-panel">
+                    <i class="align-middle" data-feather="sliders"></i> <span
+                        class="align-middle">Dashboard</span>
+                </a>
+            </li>
+            
             <li class="sidebar-item">
                 <a class="sidebar-link" href="/users">
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Users</span>
