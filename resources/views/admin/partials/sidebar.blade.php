@@ -10,6 +10,12 @@
             </li>
 
             <li class="sidebar-item">
+                <a class="sidebar-link" href="/">
+                    <i class="align-middle" data-feather="sliders"></i> <span
+                        class="align-middle">Back To AlltBlogs</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
                 <a class="sidebar-link" href="/admin-panel">
                     <i class="align-middle" data-feather="sliders"></i> <span
                         class="align-middle">Dashboard</span>

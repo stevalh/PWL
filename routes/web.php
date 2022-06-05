@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CreatePostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +36,9 @@ Route::get('/admin-panel', function () {
     return view('admin.index');
 });
 
-Route::get('/approvepost', function () {
-    return view('admin.approvepost');
-});
+// Route::get('/approvepost', function () {
+//     return view('admin.approvepost');
+// });
 
 use App\Http\Controllers\UsersController;
 Route::get('/users',[UsersController::class,'show']);
@@ -50,14 +51,15 @@ Route::get('/makecategory/edit/{id}',[setCategory::class,'edit']);
 Route::post('/makecategory/update',[setCategory::class,'update']);
 Route::get('/makecategory/hapus/{id}',[setCategory::class,'hapuscategory']);
 Route::get('/makepost',[setCategory::class,'selectcategory']);
+Route::get('/delpost/{id}',[setCategory::class,'deladminpost']);
 
-Route::get('/pagesprofile', function () {
-    return view('admin.pages-profile');
-});
+// Route::get('/pagesprofile', function () {
+//     return view('admin.pages-profile');
+// });
 
-Route::get('/trashcomment',function(){
-    return view('admin.trashcomment');
-});
+// Route::get('/trashcomment',function(){
+//     return view('admin.trashcomment');
+// });
 
 
 // end of admin (not completed)
@@ -77,6 +79,11 @@ Route::get('/create',[CreatePostController::class,'index'])->name('createpost');
 
 Route::post('/create',[CreatePostController::class,'createpost'])->name('createpost');
 Route::get('/userpost/hapus/{id}',[CreatePostController::class,'hapus']);
+
+Route::post('/send',[CommentController::class,'send'])->name('send');
+Route::post('/reply',[CommentController::class,'reply'])->name('reply');
+
+Route::get('/delcom/{id}',[CommentController::class,'delcom'])->name('delcom');
 
 
 

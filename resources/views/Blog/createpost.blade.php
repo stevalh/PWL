@@ -29,7 +29,11 @@
                     </div>
                     <div class="d-flex flex-column fw-bold">
                         <a class="text-dark mb-1">{{ auth()->user()->name }}</a>
+                        @if(auth()->user()->level == "admin")
+                        <div class="small text-muted">admin</div>
+                        @else
                         <div class="small text-muted">member</div>
+                        @endif
                     </div>
                 </div>
             </div>

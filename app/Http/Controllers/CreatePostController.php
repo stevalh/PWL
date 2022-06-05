@@ -39,6 +39,7 @@ class CreatePostController extends Controller
     if($request->file('thumb'))
     {
         $validatedData['thumb']=$request->file('thumb')->store('thumbnail');
+        
     }
 
       $validatedData['user_id']=auth()->user()->id;

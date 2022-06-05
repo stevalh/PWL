@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('komen');
-            $table->foreignId('users_id');
-            $table->foreignId('posts_id');
-            $table->foreignId('parent');
+            $table->longText('comment');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->unsignedBigInteger('post_id');
+            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreignId('parent')->default(0);
             $table->timestamps();
         });
     }

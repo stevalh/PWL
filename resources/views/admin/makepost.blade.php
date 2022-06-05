@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <a href ="" class ="btn btn-dark">Create Post </a>
+                <a href ="{{ route('createpost') }}" class ="btn btn-dark">Create Post </a>
                 <div class="table-wrap">
                     <table class="table">
                         <thead class="thead-dark">
@@ -30,7 +30,7 @@
                                 <td>{{$p -> user_id}}</td>
                                 <td>{{$p -> content}} </td>
                                 <td>{{$p -> category_id}}</td>                                     
-                                <td><a href = "" class ="btn btn-danger">Delete</a>
+                                <td><a href = "/delpost/{{ $p->id }}" class ="btn btn-danger">Delete</a>
                             </tr>
                             @endforeach
                         </tbody>

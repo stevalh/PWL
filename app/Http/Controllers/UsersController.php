@@ -10,7 +10,7 @@ class UsersController extends Controller
 {
     public function show()
     {
-        $users = DB::table('users')->get();
+        $users = DB::table('users')->paginate(3);
 
         return view('admin.users',['users' => $users]);
     }
