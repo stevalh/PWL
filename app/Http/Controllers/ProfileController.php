@@ -51,7 +51,7 @@ class ProfileController extends Controller
         $user=User::findorFail(auth()->user()->id);
         if($request->file('image')!=NULL)
         {
-        $newImageName= time().'-'.$request->image->extension();
+        $newImageName= time().'.'.$request->image->extension();
         $request->image->move(public_path('storage/images'),$newImageName);
         $validatedData['image']="images/".$newImageName;
         $user->name=$validateData['name'];

@@ -38,7 +38,7 @@ class CreatePostController extends Controller
 
     if($request->file('thumb'))
     {
-      $newImageName= time().'-'.$request->thumb->extension();
+      $newImageName= time().'.'.$request->thumb->extension();
       $request->thumb->move(public_path('storage/images'),$newImageName);
       $validatedData['thumb']="images/".$newImageName;
         
